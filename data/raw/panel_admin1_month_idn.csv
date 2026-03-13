@@ -1,0 +1,2775 @@
+admin1,month,protest_count,repression_events,protest_count_t1
+Aceh,2019-01-01,6,0,1
+Aceh,2019-02-01,1,0,2
+Aceh,2019-03-01,2,0,3
+Aceh,2019-04-01,3,1,5
+Aceh,2019-05-01,5,0,3
+Aceh,2019-06-01,3,0,3
+Aceh,2019-07-01,3,0,12
+Aceh,2019-08-01,12,1,11
+Aceh,2019-09-01,11,2,3
+Aceh,2019-10-01,3,0,0
+Aceh,2019-11-01,0,0,6
+Aceh,2019-12-01,6,1,4
+Aceh,2020-01-01,4,0,2
+Aceh,2020-02-01,2,0,2
+Aceh,2020-03-01,2,0,1
+Aceh,2020-04-01,1,0,4
+Aceh,2020-05-01,4,0,4
+Aceh,2020-06-01,4,0,3
+Aceh,2020-07-01,3,0,4
+Aceh,2020-08-01,4,0,8
+Aceh,2020-09-01,8,0,5
+Aceh,2020-10-01,5,0,10
+Aceh,2020-11-01,10,0,2
+Aceh,2020-12-01,2,1,1
+Aceh,2021-01-01,1,0,2
+Aceh,2021-02-01,2,0,10
+Aceh,2021-03-01,10,2,4
+Aceh,2021-04-01,4,0,2
+Aceh,2021-05-01,2,0,4
+Aceh,2021-06-01,4,0,1
+Aceh,2021-07-01,1,0,6
+Aceh,2021-08-01,6,1,3
+Aceh,2021-09-01,3,0,7
+Aceh,2021-10-01,7,0,6
+Aceh,2021-11-01,6,1,4
+Aceh,2021-12-01,4,1,6
+Aceh,2022-01-01,6,0,9
+Aceh,2022-02-01,9,0,16
+Aceh,2022-03-01,16,0,6
+Aceh,2022-04-01,6,1,5
+Aceh,2022-05-01,5,0,2
+Aceh,2022-06-01,2,0,2
+Aceh,2022-07-01,2,0,5
+Aceh,2022-08-01,5,0,21
+Aceh,2022-09-01,21,1,9
+Aceh,2022-10-01,9,0,5
+Aceh,2022-11-01,5,0,9
+Aceh,2022-12-01,9,1,9
+Aceh,2023-01-01,9,0,10
+Aceh,2023-02-01,10,0,5
+Aceh,2023-03-01,5,0,4
+Aceh,2023-04-01,4,0,10
+Aceh,2023-05-01,10,0,7
+Aceh,2023-06-01,7,0,6
+Aceh,2023-07-01,6,0,14
+Aceh,2023-08-01,14,1,10
+Aceh,2023-09-01,10,0,17
+Aceh,2023-10-01,17,0,19
+Aceh,2023-11-01,19,0,17
+Aceh,2023-12-01,17,0,10
+Aceh,2024-01-01,10,0,14
+Aceh,2024-02-01,14,0,5
+Aceh,2024-03-01,5,0,5
+Aceh,2024-04-01,5,0,11
+Aceh,2024-05-01,11,0,4
+Aceh,2024-06-01,4,0,5
+Aceh,2024-07-01,5,0,9
+Aceh,2024-08-01,9,1,4
+Aceh,2024-09-01,4,0,2
+Aceh,2024-10-01,2,0,11
+Aceh,2024-11-01,11,0,8
+Aceh,2024-12-01,8,0,15
+Aceh,2025-01-01,15,0,NA
+Bali,2019-01-01,2,0,0
+Bali,2019-02-01,0,0,0
+Bali,2019-03-01,0,0,3
+Bali,2019-04-01,3,2,1
+Bali,2019-05-01,1,0,0
+Bali,2019-06-01,0,0,2
+Bali,2019-07-01,2,1,0
+Bali,2019-08-01,0,0,3
+Bali,2019-09-01,3,0,0
+Bali,2019-10-01,0,0,0
+Bali,2019-11-01,0,0,0
+Bali,2019-12-01,0,0,0
+Bali,2020-01-01,0,0,0
+Bali,2020-02-01,0,0,0
+Bali,2020-03-01,0,0,2
+Bali,2020-04-01,2,0,0
+Bali,2020-05-01,0,0,0
+Bali,2020-06-01,0,0,3
+Bali,2020-07-01,3,1,1
+Bali,2020-08-01,1,1,3
+Bali,2020-09-01,3,1,4
+Bali,2020-10-01,4,0,1
+Bali,2020-11-01,1,0,0
+Bali,2020-12-01,0,0,0
+Bali,2021-01-01,0,0,0
+Bali,2021-02-01,0,0,1
+Bali,2021-03-01,1,1,0
+Bali,2021-04-01,0,0,2
+Bali,2021-05-01,2,1,2
+Bali,2021-06-01,2,0,2
+Bali,2021-07-01,2,1,2
+Bali,2021-08-01,2,0,3
+Bali,2021-09-01,3,1,5
+Bali,2021-10-01,5,0,0
+Bali,2021-11-01,0,0,3
+Bali,2021-12-01,3,0,3
+Bali,2022-01-01,3,0,1
+Bali,2022-02-01,1,0,3
+Bali,2022-03-01,3,0,3
+Bali,2022-04-01,3,0,2
+Bali,2022-05-01,2,1,3
+Bali,2022-06-01,3,0,7
+Bali,2022-07-01,7,0,3
+Bali,2022-08-01,3,0,4
+Bali,2022-09-01,4,0,2
+Bali,2022-10-01,2,0,2
+Bali,2022-11-01,2,2,3
+Bali,2022-12-01,3,0,0
+Bali,2023-01-01,0,0,1
+Bali,2023-02-01,1,0,4
+Bali,2023-03-01,4,0,2
+Bali,2023-04-01,2,0,3
+Bali,2023-05-01,3,0,4
+Bali,2023-06-01,4,0,2
+Bali,2023-07-01,2,0,1
+Bali,2023-08-01,1,0,2
+Bali,2023-09-01,2,0,1
+Bali,2023-10-01,1,0,2
+Bali,2023-11-01,2,0,1
+Bali,2023-12-01,1,0,3
+Bali,2024-01-01,3,0,5
+Bali,2024-02-01,5,0,0
+Bali,2024-03-01,0,0,1
+Bali,2024-04-01,1,1,4
+Bali,2024-05-01,4,0,3
+Bali,2024-06-01,3,1,3
+Bali,2024-07-01,3,0,8
+Bali,2024-08-01,8,0,0
+Bali,2024-09-01,0,0,0
+Bali,2024-10-01,0,0,1
+Bali,2024-11-01,1,0,3
+Bali,2024-12-01,3,0,4
+Bali,2025-01-01,4,0,NA
+Bangka-Belitung,2019-01-01,0,0,0
+Bangka-Belitung,2019-02-01,0,0,0
+Bangka-Belitung,2019-03-01,0,0,0
+Bangka-Belitung,2019-04-01,0,0,1
+Bangka-Belitung,2019-05-01,1,0,0
+Bangka-Belitung,2019-06-01,0,0,0
+Bangka-Belitung,2019-07-01,0,0,0
+Bangka-Belitung,2019-08-01,0,0,4
+Bangka-Belitung,2019-09-01,4,0,0
+Bangka-Belitung,2019-10-01,0,0,4
+Bangka-Belitung,2019-11-01,4,0,2
+Bangka-Belitung,2019-12-01,2,0,0
+Bangka-Belitung,2020-01-01,0,0,2
+Bangka-Belitung,2020-02-01,2,0,2
+Bangka-Belitung,2020-03-01,2,0,0
+Bangka-Belitung,2020-04-01,0,0,0
+Bangka-Belitung,2020-05-01,0,0,0
+Bangka-Belitung,2020-06-01,0,0,0
+Bangka-Belitung,2020-07-01,0,0,1
+Bangka-Belitung,2020-08-01,1,0,2
+Bangka-Belitung,2020-09-01,2,0,1
+Bangka-Belitung,2020-10-01,1,0,2
+Bangka-Belitung,2020-11-01,2,1,1
+Bangka-Belitung,2020-12-01,1,0,0
+Bangka-Belitung,2021-01-01,0,0,0
+Bangka-Belitung,2021-02-01,0,0,0
+Bangka-Belitung,2021-03-01,0,0,0
+Bangka-Belitung,2021-04-01,0,0,0
+Bangka-Belitung,2021-05-01,0,0,0
+Bangka-Belitung,2021-06-01,0,0,1
+Bangka-Belitung,2021-07-01,1,0,2
+Bangka-Belitung,2021-08-01,2,0,0
+Bangka-Belitung,2021-09-01,0,0,1
+Bangka-Belitung,2021-10-01,1,0,3
+Bangka-Belitung,2021-11-01,3,0,1
+Bangka-Belitung,2021-12-01,1,0,3
+Bangka-Belitung,2022-01-01,3,0,2
+Bangka-Belitung,2022-02-01,2,0,2
+Bangka-Belitung,2022-03-01,2,0,4
+Bangka-Belitung,2022-04-01,4,0,2
+Bangka-Belitung,2022-05-01,2,0,1
+Bangka-Belitung,2022-06-01,1,0,1
+Bangka-Belitung,2022-07-01,1,0,3
+Bangka-Belitung,2022-08-01,3,0,5
+Bangka-Belitung,2022-09-01,5,0,1
+Bangka-Belitung,2022-10-01,1,0,2
+Bangka-Belitung,2022-11-01,2,0,1
+Bangka-Belitung,2022-12-01,1,0,1
+Bangka-Belitung,2023-01-01,1,0,1
+Bangka-Belitung,2023-02-01,1,0,2
+Bangka-Belitung,2023-03-01,2,0,0
+Bangka-Belitung,2023-04-01,0,0,11
+Bangka-Belitung,2023-05-01,11,0,3
+Bangka-Belitung,2023-06-01,3,0,6
+Bangka-Belitung,2023-07-01,6,0,3
+Bangka-Belitung,2023-08-01,3,0,2
+Bangka-Belitung,2023-09-01,2,0,9
+Bangka-Belitung,2023-10-01,9,0,1
+Bangka-Belitung,2023-11-01,1,0,5
+Bangka-Belitung,2023-12-01,5,0,4
+Bangka-Belitung,2024-01-01,4,0,0
+Bangka-Belitung,2024-02-01,0,0,0
+Bangka-Belitung,2024-03-01,0,0,1
+Bangka-Belitung,2024-04-01,1,0,4
+Bangka-Belitung,2024-05-01,4,0,1
+Bangka-Belitung,2024-06-01,1,0,3
+Bangka-Belitung,2024-07-01,3,0,8
+Bangka-Belitung,2024-08-01,8,0,6
+Bangka-Belitung,2024-09-01,6,0,4
+Bangka-Belitung,2024-10-01,4,0,2
+Bangka-Belitung,2024-11-01,2,0,6
+Bangka-Belitung,2024-12-01,6,0,7
+Bangka-Belitung,2025-01-01,7,0,NA
+Banten,2019-01-01,2,0,0
+Banten,2019-02-01,0,0,1
+Banten,2019-03-01,1,0,1
+Banten,2019-04-01,1,0,2
+Banten,2019-05-01,2,0,1
+Banten,2019-06-01,1,0,2
+Banten,2019-07-01,2,0,2
+Banten,2019-08-01,2,0,2
+Banten,2019-09-01,2,0,4
+Banten,2019-10-01,4,0,1
+Banten,2019-11-01,1,0,2
+Banten,2019-12-01,2,0,2
+Banten,2020-01-01,2,0,1
+Banten,2020-02-01,1,0,1
+Banten,2020-03-01,1,0,0
+Banten,2020-04-01,0,0,2
+Banten,2020-05-01,2,0,4
+Banten,2020-06-01,4,0,4
+Banten,2020-07-01,4,0,4
+Banten,2020-08-01,4,0,1
+Banten,2020-09-01,1,0,13
+Banten,2020-10-01,13,1,7
+Banten,2020-11-01,7,2,3
+Banten,2020-12-01,3,1,1
+Banten,2021-01-01,1,0,0
+Banten,2021-02-01,0,0,6
+Banten,2021-03-01,6,0,2
+Banten,2021-04-01,2,0,5
+Banten,2021-05-01,5,0,3
+Banten,2021-06-01,3,0,5
+Banten,2021-07-01,5,3,2
+Banten,2021-08-01,2,0,3
+Banten,2021-09-01,3,1,12
+Banten,2021-10-01,12,2,19
+Banten,2021-11-01,19,0,5
+Banten,2021-12-01,5,0,8
+Banten,2022-01-01,8,0,7
+Banten,2022-02-01,7,0,3
+Banten,2022-03-01,3,0,7
+Banten,2022-04-01,7,0,2
+Banten,2022-05-01,2,0,5
+Banten,2022-06-01,5,1,4
+Banten,2022-07-01,4,0,12
+Banten,2022-08-01,12,1,21
+Banten,2022-09-01,21,0,5
+Banten,2022-10-01,5,0,8
+Banten,2022-11-01,8,0,6
+Banten,2022-12-01,6,0,4
+Banten,2023-01-01,4,0,1
+Banten,2023-02-01,1,0,3
+Banten,2023-03-01,3,0,4
+Banten,2023-04-01,4,0,9
+Banten,2023-05-01,9,0,3
+Banten,2023-06-01,3,0,5
+Banten,2023-07-01,5,0,2
+Banten,2023-08-01,2,0,4
+Banten,2023-09-01,4,0,10
+Banten,2023-10-01,10,1,13
+Banten,2023-11-01,13,0,6
+Banten,2023-12-01,6,0,3
+Banten,2024-01-01,3,0,4
+Banten,2024-02-01,4,0,4
+Banten,2024-03-01,4,0,4
+Banten,2024-04-01,4,0,12
+Banten,2024-05-01,12,0,6
+Banten,2024-06-01,6,0,3
+Banten,2024-07-01,3,0,12
+Banten,2024-08-01,12,0,6
+Banten,2024-09-01,6,0,14
+Banten,2024-10-01,14,1,14
+Banten,2024-11-01,14,0,10
+Banten,2024-12-01,10,0,13
+Banten,2025-01-01,13,0,NA
+Bengkulu,2019-01-01,0,0,1
+Bengkulu,2019-02-01,1,0,0
+Bengkulu,2019-03-01,0,0,1
+Bengkulu,2019-04-01,1,0,2
+Bengkulu,2019-05-01,2,0,0
+Bengkulu,2019-06-01,0,0,0
+Bengkulu,2019-07-01,0,0,0
+Bengkulu,2019-08-01,0,0,1
+Bengkulu,2019-09-01,1,0,0
+Bengkulu,2019-10-01,0,0,0
+Bengkulu,2019-11-01,0,0,1
+Bengkulu,2019-12-01,1,0,0
+Bengkulu,2020-01-01,0,0,1
+Bengkulu,2020-02-01,1,1,0
+Bengkulu,2020-03-01,0,0,0
+Bengkulu,2020-04-01,0,0,0
+Bengkulu,2020-05-01,0,0,0
+Bengkulu,2020-06-01,0,0,1
+Bengkulu,2020-07-01,1,0,0
+Bengkulu,2020-08-01,0,0,1
+Bengkulu,2020-09-01,1,1,2
+Bengkulu,2020-10-01,2,1,0
+Bengkulu,2020-11-01,0,0,0
+Bengkulu,2020-12-01,0,0,0
+Bengkulu,2021-01-01,0,0,1
+Bengkulu,2021-02-01,1,0,0
+Bengkulu,2021-03-01,0,0,1
+Bengkulu,2021-04-01,1,0,0
+Bengkulu,2021-05-01,0,0,0
+Bengkulu,2021-06-01,0,0,1
+Bengkulu,2021-07-01,1,0,0
+Bengkulu,2021-08-01,0,0,0
+Bengkulu,2021-09-01,0,0,1
+Bengkulu,2021-10-01,1,0,0
+Bengkulu,2021-11-01,0,0,6
+Bengkulu,2021-12-01,6,1,4
+Bengkulu,2022-01-01,4,0,0
+Bengkulu,2022-02-01,0,0,2
+Bengkulu,2022-03-01,2,0,3
+Bengkulu,2022-04-01,3,0,1
+Bengkulu,2022-05-01,1,0,2
+Bengkulu,2022-06-01,2,0,4
+Bengkulu,2022-07-01,4,0,1
+Bengkulu,2022-08-01,1,0,6
+Bengkulu,2022-09-01,6,1,2
+Bengkulu,2022-10-01,2,0,1
+Bengkulu,2022-11-01,1,0,5
+Bengkulu,2022-12-01,5,0,1
+Bengkulu,2023-01-01,1,0,0
+Bengkulu,2023-02-01,0,0,0
+Bengkulu,2023-03-01,0,0,0
+Bengkulu,2023-04-01,0,0,6
+Bengkulu,2023-05-01,6,0,1
+Bengkulu,2023-06-01,1,0,0
+Bengkulu,2023-07-01,0,0,1
+Bengkulu,2023-08-01,1,0,2
+Bengkulu,2023-09-01,2,0,4
+Bengkulu,2023-10-01,4,0,1
+Bengkulu,2023-11-01,1,0,1
+Bengkulu,2023-12-01,1,0,0
+Bengkulu,2024-01-01,0,0,0
+Bengkulu,2024-02-01,0,0,0
+Bengkulu,2024-03-01,0,0,2
+Bengkulu,2024-04-01,2,0,4
+Bengkulu,2024-05-01,4,0,1
+Bengkulu,2024-06-01,1,0,0
+Bengkulu,2024-07-01,0,0,4
+Bengkulu,2024-08-01,4,1,1
+Bengkulu,2024-09-01,1,0,0
+Bengkulu,2024-10-01,0,0,4
+Bengkulu,2024-11-01,4,0,2
+Bengkulu,2024-12-01,2,0,4
+Bengkulu,2025-01-01,4,0,NA
+Central Java,2019-01-01,6,0,4
+Central Java,2019-02-01,4,0,5
+Central Java,2019-03-01,5,0,0
+Central Java,2019-04-01,0,0,4
+Central Java,2019-05-01,4,0,1
+Central Java,2019-06-01,1,0,4
+Central Java,2019-07-01,4,1,10
+Central Java,2019-08-01,10,0,15
+Central Java,2019-09-01,15,1,8
+Central Java,2019-10-01,8,1,7
+Central Java,2019-11-01,7,0,9
+Central Java,2019-12-01,9,1,2
+Central Java,2020-01-01,2,0,4
+Central Java,2020-02-01,4,0,12
+Central Java,2020-03-01,12,0,4
+Central Java,2020-04-01,4,0,0
+Central Java,2020-05-01,0,0,8
+Central Java,2020-06-01,8,0,9
+Central Java,2020-07-01,9,0,6
+Central Java,2020-08-01,6,0,3
+Central Java,2020-09-01,3,1,16
+Central Java,2020-10-01,16,3,5
+Central Java,2020-11-01,5,1,1
+Central Java,2020-12-01,1,0,2
+Central Java,2021-01-01,2,0,1
+Central Java,2021-02-01,1,0,5
+Central Java,2021-03-01,5,1,3
+Central Java,2021-04-01,3,1,15
+Central Java,2021-05-01,15,2,7
+Central Java,2021-06-01,7,1,5
+Central Java,2021-07-01,5,0,5
+Central Java,2021-08-01,5,1,10
+Central Java,2021-09-01,10,2,8
+Central Java,2021-10-01,8,1,18
+Central Java,2021-11-01,18,1,18
+Central Java,2021-12-01,18,0,11
+Central Java,2022-01-01,11,0,19
+Central Java,2022-02-01,19,2,19
+Central Java,2022-03-01,19,0,17
+Central Java,2022-04-01,17,0,8
+Central Java,2022-05-01,8,0,14
+Central Java,2022-06-01,14,0,15
+Central Java,2022-07-01,15,0,10
+Central Java,2022-08-01,10,0,48
+Central Java,2022-09-01,48,0,18
+Central Java,2022-10-01,18,0,16
+Central Java,2022-11-01,16,0,18
+Central Java,2022-12-01,18,0,9
+Central Java,2023-01-01,9,0,15
+Central Java,2023-02-01,15,0,16
+Central Java,2023-03-01,16,0,6
+Central Java,2023-04-01,6,0,20
+Central Java,2023-05-01,20,0,14
+Central Java,2023-06-01,14,0,9
+Central Java,2023-07-01,9,0,28
+Central Java,2023-08-01,28,0,17
+Central Java,2023-09-01,17,0,19
+Central Java,2023-10-01,19,0,26
+Central Java,2023-11-01,26,0,9
+Central Java,2023-12-01,9,0,14
+Central Java,2024-01-01,14,0,22
+Central Java,2024-02-01,22,1,22
+Central Java,2024-03-01,22,0,10
+Central Java,2024-04-01,10,0,25
+Central Java,2024-05-01,25,1,11
+Central Java,2024-06-01,11,0,12
+Central Java,2024-07-01,12,0,24
+Central Java,2024-08-01,24,0,20
+Central Java,2024-09-01,20,0,18
+Central Java,2024-10-01,18,0,28
+Central Java,2024-11-01,28,0,29
+Central Java,2024-12-01,29,0,35
+Central Java,2025-01-01,35,0,NA
+Central Kalimantan,2019-01-01,0,0,0
+Central Kalimantan,2019-02-01,0,0,0
+Central Kalimantan,2019-03-01,0,0,0
+Central Kalimantan,2019-04-01,0,0,0
+Central Kalimantan,2019-05-01,0,0,0
+Central Kalimantan,2019-06-01,0,0,1
+Central Kalimantan,2019-07-01,1,0,0
+Central Kalimantan,2019-08-01,0,0,2
+Central Kalimantan,2019-09-01,2,0,0
+Central Kalimantan,2019-10-01,0,0,1
+Central Kalimantan,2019-11-01,1,0,0
+Central Kalimantan,2019-12-01,0,0,0
+Central Kalimantan,2020-01-01,0,0,0
+Central Kalimantan,2020-02-01,0,0,0
+Central Kalimantan,2020-03-01,0,0,0
+Central Kalimantan,2020-04-01,0,0,0
+Central Kalimantan,2020-05-01,0,0,2
+Central Kalimantan,2020-06-01,2,0,0
+Central Kalimantan,2020-07-01,0,0,0
+Central Kalimantan,2020-08-01,0,0,0
+Central Kalimantan,2020-09-01,0,0,1
+Central Kalimantan,2020-10-01,1,1,0
+Central Kalimantan,2020-11-01,0,0,0
+Central Kalimantan,2020-12-01,0,0,0
+Central Kalimantan,2021-01-01,0,0,0
+Central Kalimantan,2021-02-01,0,0,0
+Central Kalimantan,2021-03-01,0,0,0
+Central Kalimantan,2021-04-01,0,0,0
+Central Kalimantan,2021-05-01,0,0,0
+Central Kalimantan,2021-06-01,0,0,1
+Central Kalimantan,2021-07-01,1,0,0
+Central Kalimantan,2021-08-01,0,0,0
+Central Kalimantan,2021-09-01,0,0,1
+Central Kalimantan,2021-10-01,1,0,2
+Central Kalimantan,2021-11-01,2,0,2
+Central Kalimantan,2021-12-01,2,0,3
+Central Kalimantan,2022-01-01,3,0,1
+Central Kalimantan,2022-02-01,1,0,1
+Central Kalimantan,2022-03-01,1,0,2
+Central Kalimantan,2022-04-01,2,0,3
+Central Kalimantan,2022-05-01,3,0,2
+Central Kalimantan,2022-06-01,2,0,5
+Central Kalimantan,2022-07-01,5,0,3
+Central Kalimantan,2022-08-01,3,0,3
+Central Kalimantan,2022-09-01,3,0,1
+Central Kalimantan,2022-10-01,1,0,1
+Central Kalimantan,2022-11-01,1,0,1
+Central Kalimantan,2022-12-01,1,0,0
+Central Kalimantan,2023-01-01,0,0,0
+Central Kalimantan,2023-02-01,0,0,2
+Central Kalimantan,2023-03-01,2,0,1
+Central Kalimantan,2023-04-01,1,0,2
+Central Kalimantan,2023-05-01,2,0,4
+Central Kalimantan,2023-06-01,4,0,2
+Central Kalimantan,2023-07-01,2,0,0
+Central Kalimantan,2023-08-01,0,0,5
+Central Kalimantan,2023-09-01,5,0,6
+Central Kalimantan,2023-10-01,6,0,2
+Central Kalimantan,2023-11-01,2,0,0
+Central Kalimantan,2023-12-01,0,0,1
+Central Kalimantan,2024-01-01,1,0,2
+Central Kalimantan,2024-02-01,2,0,2
+Central Kalimantan,2024-03-01,2,0,2
+Central Kalimantan,2024-04-01,2,0,5
+Central Kalimantan,2024-05-01,5,0,1
+Central Kalimantan,2024-06-01,1,0,2
+Central Kalimantan,2024-07-01,2,0,0
+Central Kalimantan,2024-08-01,0,0,2
+Central Kalimantan,2024-09-01,2,0,4
+Central Kalimantan,2024-10-01,4,0,2
+Central Kalimantan,2024-11-01,2,0,3
+Central Kalimantan,2024-12-01,3,0,3
+Central Kalimantan,2025-01-01,3,0,NA
+Central Papua,2019-01-01,0,0,2
+Central Papua,2019-02-01,2,0,0
+Central Papua,2019-03-01,0,0,0
+Central Papua,2019-04-01,0,0,1
+Central Papua,2019-05-01,1,0,2
+Central Papua,2019-06-01,2,1,4
+Central Papua,2019-07-01,4,0,5
+Central Papua,2019-08-01,5,0,0
+Central Papua,2019-09-01,0,0,0
+Central Papua,2019-10-01,0,0,4
+Central Papua,2019-11-01,4,1,1
+Central Papua,2019-12-01,1,0,1
+Central Papua,2020-01-01,1,1,1
+Central Papua,2020-02-01,1,0,3
+Central Papua,2020-03-01,3,1,2
+Central Papua,2020-04-01,2,0,0
+Central Papua,2020-05-01,0,0,2
+Central Papua,2020-06-01,2,0,2
+Central Papua,2020-07-01,2,0,10
+Central Papua,2020-08-01,10,0,5
+Central Papua,2020-09-01,5,1,1
+Central Papua,2020-10-01,1,0,1
+Central Papua,2020-11-01,1,0,7
+Central Papua,2020-12-01,7,1,3
+Central Papua,2021-01-01,3,0,3
+Central Papua,2021-02-01,3,0,4
+Central Papua,2021-03-01,4,0,3
+Central Papua,2021-04-01,3,0,0
+Central Papua,2021-05-01,0,0,4
+Central Papua,2021-06-01,4,1,1
+Central Papua,2021-07-01,1,0,3
+Central Papua,2021-08-01,3,0,1
+Central Papua,2021-09-01,1,0,2
+Central Papua,2021-10-01,2,0,4
+Central Papua,2021-11-01,4,0,3
+Central Papua,2021-12-01,3,0,1
+Central Papua,2022-01-01,1,0,3
+Central Papua,2022-02-01,3,0,5
+Central Papua,2022-03-01,5,0,6
+Central Papua,2022-04-01,6,1,2
+Central Papua,2022-05-01,2,0,10
+Central Papua,2022-06-01,10,2,3
+Central Papua,2022-07-01,3,0,1
+Central Papua,2022-08-01,1,0,4
+Central Papua,2022-09-01,4,0,0
+Central Papua,2022-10-01,0,0,0
+Central Papua,2022-11-01,0,0,4
+Central Papua,2022-12-01,4,0,1
+Central Papua,2023-01-01,1,0,0
+Central Papua,2023-02-01,0,0,2
+Central Papua,2023-03-01,2,0,1
+Central Papua,2023-04-01,1,0,2
+Central Papua,2023-05-01,2,0,2
+Central Papua,2023-06-01,2,0,4
+Central Papua,2023-07-01,4,0,0
+Central Papua,2023-08-01,0,0,3
+Central Papua,2023-09-01,3,0,2
+Central Papua,2023-10-01,2,0,6
+Central Papua,2023-11-01,6,0,4
+Central Papua,2023-12-01,4,1,2
+Central Papua,2024-01-01,2,0,0
+Central Papua,2024-02-01,0,0,2
+Central Papua,2024-03-01,2,0,1
+Central Papua,2024-04-01,1,0,5
+Central Papua,2024-05-01,5,0,2
+Central Papua,2024-06-01,2,0,2
+Central Papua,2024-07-01,2,0,12
+Central Papua,2024-08-01,12,2,1
+Central Papua,2024-09-01,1,0,4
+Central Papua,2024-10-01,4,0,3
+Central Papua,2024-11-01,3,1,4
+Central Papua,2024-12-01,4,0,3
+Central Papua,2025-01-01,3,0,NA
+Central Sulawesi,2019-01-01,1,0,1
+Central Sulawesi,2019-02-01,1,0,0
+Central Sulawesi,2019-03-01,0,0,0
+Central Sulawesi,2019-04-01,0,0,0
+Central Sulawesi,2019-05-01,0,0,0
+Central Sulawesi,2019-06-01,0,0,2
+Central Sulawesi,2019-07-01,2,0,0
+Central Sulawesi,2019-08-01,0,0,3
+Central Sulawesi,2019-09-01,3,1,2
+Central Sulawesi,2019-10-01,2,0,0
+Central Sulawesi,2019-11-01,0,0,0
+Central Sulawesi,2019-12-01,0,0,0
+Central Sulawesi,2020-01-01,0,0,0
+Central Sulawesi,2020-02-01,0,0,1
+Central Sulawesi,2020-03-01,1,0,0
+Central Sulawesi,2020-04-01,0,0,0
+Central Sulawesi,2020-05-01,0,0,2
+Central Sulawesi,2020-06-01,2,0,1
+Central Sulawesi,2020-07-01,1,0,2
+Central Sulawesi,2020-08-01,2,0,0
+Central Sulawesi,2020-09-01,0,0,0
+Central Sulawesi,2020-10-01,0,0,0
+Central Sulawesi,2020-11-01,0,0,2
+Central Sulawesi,2020-12-01,2,0,0
+Central Sulawesi,2021-01-01,0,0,1
+Central Sulawesi,2021-02-01,1,0,1
+Central Sulawesi,2021-03-01,1,0,0
+Central Sulawesi,2021-04-01,0,0,2
+Central Sulawesi,2021-05-01,2,0,5
+Central Sulawesi,2021-06-01,5,0,2
+Central Sulawesi,2021-07-01,2,1,2
+Central Sulawesi,2021-08-01,2,0,6
+Central Sulawesi,2021-09-01,6,0,1
+Central Sulawesi,2021-10-01,1,0,4
+Central Sulawesi,2021-11-01,4,1,2
+Central Sulawesi,2021-12-01,2,0,2
+Central Sulawesi,2022-01-01,2,0,7
+Central Sulawesi,2022-02-01,7,1,4
+Central Sulawesi,2022-03-01,4,0,3
+Central Sulawesi,2022-04-01,3,0,4
+Central Sulawesi,2022-05-01,4,0,2
+Central Sulawesi,2022-06-01,2,0,2
+Central Sulawesi,2022-07-01,2,0,5
+Central Sulawesi,2022-08-01,5,0,11
+Central Sulawesi,2022-09-01,11,0,0
+Central Sulawesi,2022-10-01,0,0,2
+Central Sulawesi,2022-11-01,2,0,2
+Central Sulawesi,2022-12-01,2,0,4
+Central Sulawesi,2023-01-01,4,0,2
+Central Sulawesi,2023-02-01,2,0,3
+Central Sulawesi,2023-03-01,3,0,5
+Central Sulawesi,2023-04-01,5,0,6
+Central Sulawesi,2023-05-01,6,1,7
+Central Sulawesi,2023-06-01,7,0,1
+Central Sulawesi,2023-07-01,1,0,10
+Central Sulawesi,2023-08-01,10,0,3
+Central Sulawesi,2023-09-01,3,0,4
+Central Sulawesi,2023-10-01,4,0,3
+Central Sulawesi,2023-11-01,3,0,8
+Central Sulawesi,2023-12-01,8,0,3
+Central Sulawesi,2024-01-01,3,0,7
+Central Sulawesi,2024-02-01,7,0,2
+Central Sulawesi,2024-03-01,2,0,4
+Central Sulawesi,2024-04-01,4,0,7
+Central Sulawesi,2024-05-01,7,0,3
+Central Sulawesi,2024-06-01,3,0,1
+Central Sulawesi,2024-07-01,1,0,5
+Central Sulawesi,2024-08-01,5,0,7
+Central Sulawesi,2024-09-01,7,0,6
+Central Sulawesi,2024-10-01,6,0,7
+Central Sulawesi,2024-11-01,7,0,12
+Central Sulawesi,2024-12-01,12,0,6
+Central Sulawesi,2025-01-01,6,0,NA
+East Java,2019-01-01,2,0,11
+East Java,2019-02-01,11,1,5
+East Java,2019-03-01,5,0,7
+East Java,2019-04-01,7,1,21
+East Java,2019-05-01,21,0,6
+East Java,2019-06-01,6,0,8
+East Java,2019-07-01,8,1,24
+East Java,2019-08-01,24,0,48
+East Java,2019-09-01,48,1,9
+East Java,2019-10-01,9,0,20
+East Java,2019-11-01,20,1,10
+East Java,2019-12-01,10,0,19
+East Java,2020-01-01,19,1,12
+East Java,2020-02-01,12,0,13
+East Java,2020-03-01,13,2,4
+East Java,2020-04-01,4,2,3
+East Java,2020-05-01,3,1,10
+East Java,2020-06-01,10,1,33
+East Java,2020-07-01,33,1,23
+East Java,2020-08-01,23,2,20
+East Java,2020-09-01,20,0,17
+East Java,2020-10-01,17,2,22
+East Java,2020-11-01,22,0,9
+East Java,2020-12-01,9,0,9
+East Java,2021-01-01,9,1,7
+East Java,2021-02-01,7,0,27
+East Java,2021-03-01,27,1,13
+East Java,2021-04-01,13,0,20
+East Java,2021-05-01,20,0,15
+East Java,2021-06-01,15,0,9
+East Java,2021-07-01,9,0,17
+East Java,2021-08-01,17,0,13
+East Java,2021-09-01,13,0,20
+East Java,2021-10-01,20,0,28
+East Java,2021-11-01,28,0,22
+East Java,2021-12-01,22,0,21
+East Java,2022-01-01,21,0,25
+East Java,2022-02-01,25,1,32
+East Java,2022-03-01,32,0,36
+East Java,2022-04-01,36,1,11
+East Java,2022-05-01,11,0,20
+East Java,2022-06-01,20,0,15
+East Java,2022-07-01,15,0,14
+East Java,2022-08-01,14,1,63
+East Java,2022-09-01,63,1,25
+East Java,2022-10-01,25,0,24
+East Java,2022-11-01,24,0,20
+East Java,2022-12-01,20,0,20
+East Java,2023-01-01,20,0,22
+East Java,2023-02-01,22,0,28
+East Java,2023-03-01,28,0,16
+East Java,2023-04-01,16,0,34
+East Java,2023-05-01,34,0,25
+East Java,2023-06-01,25,0,24
+East Java,2023-07-01,24,1,35
+East Java,2023-08-01,35,2,17
+East Java,2023-09-01,17,1,28
+East Java,2023-10-01,28,0,24
+East Java,2023-11-01,24,0,25
+East Java,2023-12-01,25,1,22
+East Java,2024-01-01,22,0,39
+East Java,2024-02-01,39,1,36
+East Java,2024-03-01,36,0,8
+East Java,2024-04-01,8,0,36
+East Java,2024-05-01,36,1,23
+East Java,2024-06-01,23,1,24
+East Java,2024-07-01,24,0,45
+East Java,2024-08-01,45,1,26
+East Java,2024-09-01,26,0,25
+East Java,2024-10-01,25,0,18
+East Java,2024-11-01,18,0,27
+East Java,2024-12-01,27,0,21
+East Java,2025-01-01,21,1,NA
+East Kalimantan,2019-01-01,0,0,0
+East Kalimantan,2019-02-01,0,0,0
+East Kalimantan,2019-03-01,0,0,1
+East Kalimantan,2019-04-01,1,0,1
+East Kalimantan,2019-05-01,1,0,1
+East Kalimantan,2019-06-01,1,0,1
+East Kalimantan,2019-07-01,1,0,2
+East Kalimantan,2019-08-01,2,0,6
+East Kalimantan,2019-09-01,6,3,3
+East Kalimantan,2019-10-01,3,0,2
+East Kalimantan,2019-11-01,2,0,3
+East Kalimantan,2019-12-01,3,0,4
+East Kalimantan,2020-01-01,4,0,10
+East Kalimantan,2020-02-01,10,0,4
+East Kalimantan,2020-03-01,4,0,1
+East Kalimantan,2020-04-01,1,0,0
+East Kalimantan,2020-05-01,0,0,5
+East Kalimantan,2020-06-01,5,0,9
+East Kalimantan,2020-07-01,9,0,10
+East Kalimantan,2020-08-01,10,0,4
+East Kalimantan,2020-09-01,4,0,13
+East Kalimantan,2020-10-01,13,1,6
+East Kalimantan,2020-11-01,6,0,0
+East Kalimantan,2020-12-01,0,0,3
+East Kalimantan,2021-01-01,3,0,0
+East Kalimantan,2021-02-01,0,0,5
+East Kalimantan,2021-03-01,5,0,8
+East Kalimantan,2021-04-01,8,0,3
+East Kalimantan,2021-05-01,3,0,5
+East Kalimantan,2021-06-01,5,0,2
+East Kalimantan,2021-07-01,2,1,7
+East Kalimantan,2021-08-01,7,0,4
+East Kalimantan,2021-09-01,4,0,5
+East Kalimantan,2021-10-01,5,0,6
+East Kalimantan,2021-11-01,6,1,3
+East Kalimantan,2021-12-01,3,0,6
+East Kalimantan,2022-01-01,6,0,4
+East Kalimantan,2022-02-01,4,0,5
+East Kalimantan,2022-03-01,5,0,2
+East Kalimantan,2022-04-01,2,0,4
+East Kalimantan,2022-05-01,4,0,4
+East Kalimantan,2022-06-01,4,0,4
+East Kalimantan,2022-07-01,4,0,9
+East Kalimantan,2022-08-01,9,0,18
+East Kalimantan,2022-09-01,18,1,11
+East Kalimantan,2022-10-01,11,0,1
+East Kalimantan,2022-11-01,1,0,0
+East Kalimantan,2022-12-01,0,0,0
+East Kalimantan,2023-01-01,0,0,3
+East Kalimantan,2023-02-01,3,0,0
+East Kalimantan,2023-03-01,0,0,3
+East Kalimantan,2023-04-01,3,0,6
+East Kalimantan,2023-05-01,6,0,5
+East Kalimantan,2023-06-01,5,0,6
+East Kalimantan,2023-07-01,6,0,10
+East Kalimantan,2023-08-01,10,0,2
+East Kalimantan,2023-09-01,2,0,5
+East Kalimantan,2023-10-01,5,0,3
+East Kalimantan,2023-11-01,3,0,9
+East Kalimantan,2023-12-01,9,0,5
+East Kalimantan,2024-01-01,5,0,4
+East Kalimantan,2024-02-01,4,0,6
+East Kalimantan,2024-03-01,6,0,2
+East Kalimantan,2024-04-01,2,0,6
+East Kalimantan,2024-05-01,6,0,4
+East Kalimantan,2024-06-01,4,0,5
+East Kalimantan,2024-07-01,5,0,14
+East Kalimantan,2024-08-01,14,2,2
+East Kalimantan,2024-09-01,2,0,2
+East Kalimantan,2024-10-01,2,0,4
+East Kalimantan,2024-11-01,4,0,3
+East Kalimantan,2024-12-01,3,0,5
+East Kalimantan,2025-01-01,5,0,NA
+East Nusa Tenggara,2019-01-01,1,0,0
+East Nusa Tenggara,2019-02-01,0,0,1
+East Nusa Tenggara,2019-03-01,1,0,3
+East Nusa Tenggara,2019-04-01,3,1,2
+East Nusa Tenggara,2019-05-01,2,0,0
+East Nusa Tenggara,2019-06-01,0,0,1
+East Nusa Tenggara,2019-07-01,1,0,1
+East Nusa Tenggara,2019-08-01,1,0,1
+East Nusa Tenggara,2019-09-01,1,0,1
+East Nusa Tenggara,2019-10-01,1,0,0
+East Nusa Tenggara,2019-11-01,0,0,1
+East Nusa Tenggara,2019-12-01,1,0,1
+East Nusa Tenggara,2020-01-01,1,0,1
+East Nusa Tenggara,2020-02-01,1,0,1
+East Nusa Tenggara,2020-03-01,1,0,0
+East Nusa Tenggara,2020-04-01,0,0,1
+East Nusa Tenggara,2020-05-01,1,0,2
+East Nusa Tenggara,2020-06-01,2,0,1
+East Nusa Tenggara,2020-07-01,1,0,3
+East Nusa Tenggara,2020-08-01,3,0,1
+East Nusa Tenggara,2020-09-01,1,1,0
+East Nusa Tenggara,2020-10-01,0,0,0
+East Nusa Tenggara,2020-11-01,0,0,0
+East Nusa Tenggara,2020-12-01,0,0,2
+East Nusa Tenggara,2021-01-01,2,0,1
+East Nusa Tenggara,2021-02-01,1,0,3
+East Nusa Tenggara,2021-03-01,3,0,2
+East Nusa Tenggara,2021-04-01,2,0,2
+East Nusa Tenggara,2021-05-01,2,0,2
+East Nusa Tenggara,2021-06-01,2,1,1
+East Nusa Tenggara,2021-07-01,1,0,0
+East Nusa Tenggara,2021-08-01,0,0,5
+East Nusa Tenggara,2021-09-01,5,0,14
+East Nusa Tenggara,2021-10-01,14,2,9
+East Nusa Tenggara,2021-11-01,9,0,9
+East Nusa Tenggara,2021-12-01,9,2,10
+East Nusa Tenggara,2022-01-01,10,0,7
+East Nusa Tenggara,2022-02-01,7,0,6
+East Nusa Tenggara,2022-03-01,6,0,8
+East Nusa Tenggara,2022-04-01,8,0,2
+East Nusa Tenggara,2022-05-01,2,0,9
+East Nusa Tenggara,2022-06-01,9,0,5
+East Nusa Tenggara,2022-07-01,5,0,6
+East Nusa Tenggara,2022-08-01,6,1,10
+East Nusa Tenggara,2022-09-01,10,0,4
+East Nusa Tenggara,2022-10-01,4,0,12
+East Nusa Tenggara,2022-11-01,12,0,9
+East Nusa Tenggara,2022-12-01,9,0,6
+East Nusa Tenggara,2023-01-01,6,0,9
+East Nusa Tenggara,2023-02-01,9,0,6
+East Nusa Tenggara,2023-03-01,6,0,1
+East Nusa Tenggara,2023-04-01,1,0,3
+East Nusa Tenggara,2023-05-01,3,0,2
+East Nusa Tenggara,2023-06-01,2,0,9
+East Nusa Tenggara,2023-07-01,9,0,6
+East Nusa Tenggara,2023-08-01,6,0,3
+East Nusa Tenggara,2023-09-01,3,0,3
+East Nusa Tenggara,2023-10-01,3,0,5
+East Nusa Tenggara,2023-11-01,5,1,2
+East Nusa Tenggara,2023-12-01,2,1,3
+East Nusa Tenggara,2024-01-01,3,0,6
+East Nusa Tenggara,2024-02-01,6,0,16
+East Nusa Tenggara,2024-03-01,16,1,4
+East Nusa Tenggara,2024-04-01,4,1,7
+East Nusa Tenggara,2024-05-01,7,0,4
+East Nusa Tenggara,2024-06-01,4,0,3
+East Nusa Tenggara,2024-07-01,3,0,8
+East Nusa Tenggara,2024-08-01,8,0,0
+East Nusa Tenggara,2024-09-01,0,0,10
+East Nusa Tenggara,2024-10-01,10,2,2
+East Nusa Tenggara,2024-11-01,2,0,5
+East Nusa Tenggara,2024-12-01,5,0,6
+East Nusa Tenggara,2025-01-01,6,0,NA
+Gorontalo,2019-01-01,0,0,0
+Gorontalo,2019-02-01,0,0,0
+Gorontalo,2019-03-01,0,0,0
+Gorontalo,2019-04-01,0,0,0
+Gorontalo,2019-05-01,0,0,0
+Gorontalo,2019-06-01,0,0,0
+Gorontalo,2019-07-01,0,0,0
+Gorontalo,2019-08-01,0,0,1
+Gorontalo,2019-09-01,1,0,0
+Gorontalo,2019-10-01,0,0,0
+Gorontalo,2019-11-01,0,0,0
+Gorontalo,2019-12-01,0,0,0
+Gorontalo,2020-01-01,0,0,1
+Gorontalo,2020-02-01,1,0,0
+Gorontalo,2020-03-01,0,0,0
+Gorontalo,2020-04-01,0,0,1
+Gorontalo,2020-05-01,1,0,0
+Gorontalo,2020-06-01,0,0,1
+Gorontalo,2020-07-01,1,1,1
+Gorontalo,2020-08-01,1,0,0
+Gorontalo,2020-09-01,0,0,0
+Gorontalo,2020-10-01,0,0,1
+Gorontalo,2020-11-01,1,0,1
+Gorontalo,2020-12-01,1,0,0
+Gorontalo,2021-01-01,0,0,2
+Gorontalo,2021-02-01,2,0,0
+Gorontalo,2021-03-01,0,0,0
+Gorontalo,2021-04-01,0,0,1
+Gorontalo,2021-05-01,1,0,0
+Gorontalo,2021-06-01,0,0,0
+Gorontalo,2021-07-01,0,0,0
+Gorontalo,2021-08-01,0,0,0
+Gorontalo,2021-09-01,0,0,0
+Gorontalo,2021-10-01,0,0,0
+Gorontalo,2021-11-01,0,0,0
+Gorontalo,2021-12-01,0,0,2
+Gorontalo,2022-01-01,2,0,2
+Gorontalo,2022-02-01,2,0,2
+Gorontalo,2022-03-01,2,0,2
+Gorontalo,2022-04-01,2,0,3
+Gorontalo,2022-05-01,3,0,5
+Gorontalo,2022-06-01,5,0,2
+Gorontalo,2022-07-01,2,0,2
+Gorontalo,2022-08-01,2,0,3
+Gorontalo,2022-09-01,3,0,1
+Gorontalo,2022-10-01,1,0,5
+Gorontalo,2022-11-01,5,0,2
+Gorontalo,2022-12-01,2,0,1
+Gorontalo,2023-01-01,1,0,2
+Gorontalo,2023-02-01,2,0,3
+Gorontalo,2023-03-01,3,0,0
+Gorontalo,2023-04-01,0,0,5
+Gorontalo,2023-05-01,5,0,1
+Gorontalo,2023-06-01,1,0,2
+Gorontalo,2023-07-01,2,0,2
+Gorontalo,2023-08-01,2,0,0
+Gorontalo,2023-09-01,0,0,5
+Gorontalo,2023-10-01,5,0,3
+Gorontalo,2023-11-01,3,0,4
+Gorontalo,2023-12-01,4,0,1
+Gorontalo,2024-01-01,1,0,1
+Gorontalo,2024-02-01,1,0,2
+Gorontalo,2024-03-01,2,0,0
+Gorontalo,2024-04-01,0,0,7
+Gorontalo,2024-05-01,7,0,4
+Gorontalo,2024-06-01,4,0,5
+Gorontalo,2024-07-01,5,0,3
+Gorontalo,2024-08-01,3,1,5
+Gorontalo,2024-09-01,5,0,3
+Gorontalo,2024-10-01,3,0,0
+Gorontalo,2024-11-01,0,0,3
+Gorontalo,2024-12-01,3,1,4
+Gorontalo,2025-01-01,4,0,NA
+Highland Papua,2019-01-01,1,0,0
+Highland Papua,2019-02-01,0,0,2
+Highland Papua,2019-03-01,2,0,3
+Highland Papua,2019-04-01,3,0,3
+Highland Papua,2019-05-01,3,0,0
+Highland Papua,2019-06-01,0,0,3
+Highland Papua,2019-07-01,3,0,5
+Highland Papua,2019-08-01,5,1,2
+Highland Papua,2019-09-01,2,0,0
+Highland Papua,2019-10-01,0,0,2
+Highland Papua,2019-11-01,2,0,3
+Highland Papua,2019-12-01,3,0,1
+Highland Papua,2020-01-01,1,0,2
+Highland Papua,2020-02-01,2,0,1
+Highland Papua,2020-03-01,1,0,1
+Highland Papua,2020-04-01,1,0,0
+Highland Papua,2020-05-01,0,0,3
+Highland Papua,2020-06-01,3,0,5
+Highland Papua,2020-07-01,5,0,2
+Highland Papua,2020-08-01,2,0,2
+Highland Papua,2020-09-01,2,0,0
+Highland Papua,2020-10-01,0,0,1
+Highland Papua,2020-11-01,1,0,0
+Highland Papua,2020-12-01,0,0,1
+Highland Papua,2021-01-01,1,0,0
+Highland Papua,2021-02-01,0,0,7
+Highland Papua,2021-03-01,7,0,4
+Highland Papua,2021-04-01,4,0,0
+Highland Papua,2021-05-01,0,0,3
+Highland Papua,2021-06-01,3,0,5
+Highland Papua,2021-07-01,5,0,8
+Highland Papua,2021-08-01,8,1,0
+Highland Papua,2021-09-01,0,0,0
+Highland Papua,2021-10-01,0,0,0
+Highland Papua,2021-11-01,0,0,0
+Highland Papua,2021-12-01,0,0,2
+Highland Papua,2022-01-01,2,0,0
+Highland Papua,2022-02-01,0,0,4
+Highland Papua,2022-03-01,4,0,2
+Highland Papua,2022-04-01,2,0,4
+Highland Papua,2022-05-01,4,0,4
+Highland Papua,2022-06-01,4,0,4
+Highland Papua,2022-07-01,4,0,1
+Highland Papua,2022-08-01,1,0,3
+Highland Papua,2022-09-01,3,1,0
+Highland Papua,2022-10-01,0,0,1
+Highland Papua,2022-11-01,1,1,4
+Highland Papua,2022-12-01,4,1,2
+Highland Papua,2023-01-01,2,0,2
+Highland Papua,2023-02-01,2,0,2
+Highland Papua,2023-03-01,2,0,3
+Highland Papua,2023-04-01,3,0,5
+Highland Papua,2023-05-01,5,0,4
+Highland Papua,2023-06-01,4,0,6
+Highland Papua,2023-07-01,6,0,9
+Highland Papua,2023-08-01,9,1,4
+Highland Papua,2023-09-01,4,0,5
+Highland Papua,2023-10-01,5,0,1
+Highland Papua,2023-11-01,1,0,2
+Highland Papua,2023-12-01,2,0,2
+Highland Papua,2024-01-01,2,0,5
+Highland Papua,2024-02-01,5,0,4
+Highland Papua,2024-03-01,4,1,1
+Highland Papua,2024-04-01,1,0,3
+Highland Papua,2024-05-01,3,0,1
+Highland Papua,2024-06-01,1,0,3
+Highland Papua,2024-07-01,3,0,9
+Highland Papua,2024-08-01,9,1,6
+Highland Papua,2024-09-01,6,0,4
+Highland Papua,2024-10-01,4,0,5
+Highland Papua,2024-11-01,5,0,3
+Highland Papua,2024-12-01,3,0,3
+Highland Papua,2025-01-01,3,0,NA
+Jakarta,2019-01-01,7,0,10
+Jakarta,2019-02-01,10,0,11
+Jakarta,2019-03-01,11,0,10
+Jakarta,2019-04-01,10,1,11
+Jakarta,2019-05-01,11,0,13
+Jakarta,2019-06-01,13,1,11
+Jakarta,2019-07-01,11,0,20
+Jakarta,2019-08-01,20,1,22
+Jakarta,2019-09-01,22,0,15
+Jakarta,2019-10-01,15,1,17
+Jakarta,2019-11-01,17,1,21
+Jakarta,2019-12-01,21,1,17
+Jakarta,2020-01-01,17,1,13
+Jakarta,2020-02-01,13,1,8
+Jakarta,2020-03-01,8,1,0
+Jakarta,2020-04-01,0,0,2
+Jakarta,2020-05-01,2,0,12
+Jakarta,2020-06-01,12,0,26
+Jakarta,2020-07-01,26,3,23
+Jakarta,2020-08-01,23,2,10
+Jakarta,2020-09-01,10,0,16
+Jakarta,2020-10-01,16,1,22
+Jakarta,2020-11-01,22,2,16
+Jakarta,2020-12-01,16,1,12
+Jakarta,2021-01-01,12,1,14
+Jakarta,2021-02-01,14,0,18
+Jakarta,2021-03-01,18,2,20
+Jakarta,2021-04-01,20,2,19
+Jakarta,2021-05-01,19,5,22
+Jakarta,2021-06-01,22,2,6
+Jakarta,2021-07-01,6,4,8
+Jakarta,2021-08-01,8,3,26
+Jakarta,2021-09-01,26,6,20
+Jakarta,2021-10-01,20,3,43
+Jakarta,2021-11-01,43,1,30
+Jakarta,2021-12-01,30,2,26
+Jakarta,2022-01-01,26,0,24
+Jakarta,2022-02-01,24,0,36
+Jakarta,2022-03-01,36,0,16
+Jakarta,2022-04-01,16,1,21
+Jakarta,2022-05-01,21,2,32
+Jakarta,2022-06-01,32,0,27
+Jakarta,2022-07-01,27,0,29
+Jakarta,2022-08-01,29,0,52
+Jakarta,2022-09-01,52,1,32
+Jakarta,2022-10-01,32,1,33
+Jakarta,2022-11-01,33,1,26
+Jakarta,2022-12-01,26,0,31
+Jakarta,2023-01-01,31,0,20
+Jakarta,2023-02-01,20,0,45
+Jakarta,2023-03-01,45,0,20
+Jakarta,2023-04-01,20,0,41
+Jakarta,2023-05-01,41,0,31
+Jakarta,2023-06-01,31,0,27
+Jakarta,2023-07-01,27,0,34
+Jakarta,2023-08-01,34,1,38
+Jakarta,2023-09-01,38,0,55
+Jakarta,2023-10-01,55,2,49
+Jakarta,2023-11-01,49,0,25
+Jakarta,2023-12-01,25,0,28
+Jakarta,2024-01-01,28,0,49
+Jakarta,2024-02-01,49,1,41
+Jakarta,2024-03-01,41,1,26
+Jakarta,2024-04-01,26,0,37
+Jakarta,2024-05-01,37,1,30
+Jakarta,2024-06-01,30,0,41
+Jakarta,2024-07-01,41,1,62
+Jakarta,2024-08-01,62,0,36
+Jakarta,2024-09-01,36,1,42
+Jakarta,2024-10-01,42,1,39
+Jakarta,2024-11-01,39,0,40
+Jakarta,2024-12-01,40,0,30
+Jakarta,2025-01-01,30,0,NA
+Jambi,2019-01-01,0,0,2
+Jambi,2019-02-01,2,0,0
+Jambi,2019-03-01,0,0,0
+Jambi,2019-04-01,0,0,1
+Jambi,2019-05-01,1,0,2
+Jambi,2019-06-01,2,0,0
+Jambi,2019-07-01,0,0,1
+Jambi,2019-08-01,1,0,5
+Jambi,2019-09-01,5,2,2
+Jambi,2019-10-01,2,0,0
+Jambi,2019-11-01,0,0,0
+Jambi,2019-12-01,0,0,3
+Jambi,2020-01-01,3,0,0
+Jambi,2020-02-01,0,0,2
+Jambi,2020-03-01,2,1,0
+Jambi,2020-04-01,0,0,2
+Jambi,2020-05-01,2,0,2
+Jambi,2020-06-01,2,0,2
+Jambi,2020-07-01,2,0,1
+Jambi,2020-08-01,1,0,3
+Jambi,2020-09-01,3,0,0
+Jambi,2020-10-01,0,0,0
+Jambi,2020-11-01,0,0,2
+Jambi,2020-12-01,2,0,0
+Jambi,2021-01-01,0,0,0
+Jambi,2021-02-01,0,0,1
+Jambi,2021-03-01,1,0,5
+Jambi,2021-04-01,5,0,0
+Jambi,2021-05-01,0,0,1
+Jambi,2021-06-01,1,0,0
+Jambi,2021-07-01,0,0,0
+Jambi,2021-08-01,0,0,2
+Jambi,2021-09-01,2,0,1
+Jambi,2021-10-01,1,1,6
+Jambi,2021-11-01,6,1,5
+Jambi,2021-12-01,5,0,4
+Jambi,2022-01-01,4,0,1
+Jambi,2022-02-01,1,0,7
+Jambi,2022-03-01,7,0,3
+Jambi,2022-04-01,3,1,3
+Jambi,2022-05-01,3,0,1
+Jambi,2022-06-01,1,0,2
+Jambi,2022-07-01,2,0,6
+Jambi,2022-08-01,6,0,14
+Jambi,2022-09-01,14,0,4
+Jambi,2022-10-01,4,0,2
+Jambi,2022-11-01,2,0,3
+Jambi,2022-12-01,3,0,2
+Jambi,2023-01-01,2,0,5
+Jambi,2023-02-01,5,0,8
+Jambi,2023-03-01,8,0,2
+Jambi,2023-04-01,2,0,10
+Jambi,2023-05-01,10,0,4
+Jambi,2023-06-01,4,0,2
+Jambi,2023-07-01,2,1,2
+Jambi,2023-08-01,2,0,6
+Jambi,2023-09-01,6,0,5
+Jambi,2023-10-01,5,0,6
+Jambi,2023-11-01,6,0,4
+Jambi,2023-12-01,4,0,5
+Jambi,2024-01-01,5,0,0
+Jambi,2024-02-01,0,0,0
+Jambi,2024-03-01,0,0,1
+Jambi,2024-04-01,1,0,3
+Jambi,2024-05-01,3,0,5
+Jambi,2024-06-01,5,1,3
+Jambi,2024-07-01,3,0,3
+Jambi,2024-08-01,3,0,2
+Jambi,2024-09-01,2,0,4
+Jambi,2024-10-01,4,0,1
+Jambi,2024-11-01,1,0,1
+Jambi,2024-12-01,1,0,4
+Jambi,2025-01-01,4,0,NA
+Lampung,2019-01-01,0,0,0
+Lampung,2019-02-01,0,0,0
+Lampung,2019-03-01,0,0,1
+Lampung,2019-04-01,1,0,1
+Lampung,2019-05-01,1,0,1
+Lampung,2019-06-01,1,0,1
+Lampung,2019-07-01,1,0,0
+Lampung,2019-08-01,0,0,3
+Lampung,2019-09-01,3,0,3
+Lampung,2019-10-01,3,1,2
+Lampung,2019-11-01,2,0,2
+Lampung,2019-12-01,2,0,0
+Lampung,2020-01-01,0,0,2
+Lampung,2020-02-01,2,0,1
+Lampung,2020-03-01,1,0,1
+Lampung,2020-04-01,1,0,0
+Lampung,2020-05-01,0,0,0
+Lampung,2020-06-01,0,0,0
+Lampung,2020-07-01,0,0,0
+Lampung,2020-08-01,0,0,1
+Lampung,2020-09-01,1,0,2
+Lampung,2020-10-01,2,0,0
+Lampung,2020-11-01,0,0,0
+Lampung,2020-12-01,0,0,0
+Lampung,2021-01-01,0,0,0
+Lampung,2021-02-01,0,0,0
+Lampung,2021-03-01,0,0,0
+Lampung,2021-04-01,0,0,0
+Lampung,2021-05-01,0,0,0
+Lampung,2021-06-01,0,0,1
+Lampung,2021-07-01,1,0,1
+Lampung,2021-08-01,1,0,1
+Lampung,2021-09-01,1,0,0
+Lampung,2021-10-01,0,0,0
+Lampung,2021-11-01,0,0,7
+Lampung,2021-12-01,7,0,2
+Lampung,2022-01-01,2,0,0
+Lampung,2022-02-01,0,0,1
+Lampung,2022-03-01,1,0,6
+Lampung,2022-04-01,6,1,1
+Lampung,2022-05-01,1,0,0
+Lampung,2022-06-01,0,0,1
+Lampung,2022-07-01,1,0,4
+Lampung,2022-08-01,4,0,10
+Lampung,2022-09-01,10,0,5
+Lampung,2022-10-01,5,0,1
+Lampung,2022-11-01,1,0,2
+Lampung,2022-12-01,2,0,2
+Lampung,2023-01-01,2,0,4
+Lampung,2023-02-01,4,0,4
+Lampung,2023-03-01,4,0,3
+Lampung,2023-04-01,3,0,7
+Lampung,2023-05-01,7,1,5
+Lampung,2023-06-01,5,0,5
+Lampung,2023-07-01,5,0,4
+Lampung,2023-08-01,4,0,4
+Lampung,2023-09-01,4,1,5
+Lampung,2023-10-01,5,0,5
+Lampung,2023-11-01,5,0,2
+Lampung,2023-12-01,2,0,5
+Lampung,2024-01-01,5,0,4
+Lampung,2024-02-01,4,0,1
+Lampung,2024-03-01,1,0,5
+Lampung,2024-04-01,5,0,8
+Lampung,2024-05-01,8,0,3
+Lampung,2024-06-01,3,0,1
+Lampung,2024-07-01,1,0,4
+Lampung,2024-08-01,4,0,3
+Lampung,2024-09-01,3,0,2
+Lampung,2024-10-01,2,0,6
+Lampung,2024-11-01,6,0,4
+Lampung,2024-12-01,4,0,12
+Lampung,2025-01-01,12,0,NA
+Maluku,2019-01-01,1,0,0
+Maluku,2019-02-01,0,0,0
+Maluku,2019-03-01,0,0,0
+Maluku,2019-04-01,0,0,0
+Maluku,2019-05-01,0,0,0
+Maluku,2019-06-01,0,0,1
+Maluku,2019-07-01,1,0,1
+Maluku,2019-08-01,1,0,1
+Maluku,2019-09-01,1,0,1
+Maluku,2019-10-01,1,1,0
+Maluku,2019-11-01,0,0,1
+Maluku,2019-12-01,1,1,0
+Maluku,2020-01-01,0,0,3
+Maluku,2020-02-01,3,2,3
+Maluku,2020-03-01,3,0,1
+Maluku,2020-04-01,1,1,2
+Maluku,2020-05-01,2,0,4
+Maluku,2020-06-01,4,0,2
+Maluku,2020-07-01,2,1,1
+Maluku,2020-08-01,1,1,7
+Maluku,2020-09-01,7,0,4
+Maluku,2020-10-01,4,0,3
+Maluku,2020-11-01,3,0,0
+Maluku,2020-12-01,0,0,0
+Maluku,2021-01-01,0,0,1
+Maluku,2021-02-01,1,0,2
+Maluku,2021-03-01,2,1,1
+Maluku,2021-04-01,1,0,3
+Maluku,2021-05-01,3,1,1
+Maluku,2021-06-01,1,0,5
+Maluku,2021-07-01,5,2,4
+Maluku,2021-08-01,4,1,3
+Maluku,2021-09-01,3,0,5
+Maluku,2021-10-01,5,1,2
+Maluku,2021-11-01,2,0,2
+Maluku,2021-12-01,2,1,6
+Maluku,2022-01-01,6,0,5
+Maluku,2022-02-01,5,0,2
+Maluku,2022-03-01,2,0,4
+Maluku,2022-04-01,4,0,1
+Maluku,2022-05-01,1,0,2
+Maluku,2022-06-01,2,0,3
+Maluku,2022-07-01,3,0,1
+Maluku,2022-08-01,1,0,14
+Maluku,2022-09-01,14,1,2
+Maluku,2022-10-01,2,0,1
+Maluku,2022-11-01,1,0,1
+Maluku,2022-12-01,1,0,3
+Maluku,2023-01-01,3,0,4
+Maluku,2023-02-01,4,0,5
+Maluku,2023-03-01,5,0,3
+Maluku,2023-04-01,3,0,4
+Maluku,2023-05-01,4,0,4
+Maluku,2023-06-01,4,0,5
+Maluku,2023-07-01,5,0,2
+Maluku,2023-08-01,2,0,2
+Maluku,2023-09-01,2,0,5
+Maluku,2023-10-01,5,0,9
+Maluku,2023-11-01,9,0,5
+Maluku,2023-12-01,5,0,2
+Maluku,2024-01-01,2,0,0
+Maluku,2024-02-01,0,0,2
+Maluku,2024-03-01,2,0,4
+Maluku,2024-04-01,4,0,1
+Maluku,2024-05-01,1,0,5
+Maluku,2024-06-01,5,0,7
+Maluku,2024-07-01,7,0,4
+Maluku,2024-08-01,4,0,7
+Maluku,2024-09-01,7,0,7
+Maluku,2024-10-01,7,0,7
+Maluku,2024-11-01,7,0,6
+Maluku,2024-12-01,6,0,9
+Maluku,2025-01-01,9,0,NA
+North Kalimantan,2019-01-01,0,0,0
+North Kalimantan,2019-02-01,0,0,2
+North Kalimantan,2019-03-01,2,0,0
+North Kalimantan,2019-04-01,0,0,0
+North Kalimantan,2019-05-01,0,0,0
+North Kalimantan,2019-06-01,0,0,1
+North Kalimantan,2019-07-01,1,0,0
+North Kalimantan,2019-08-01,0,0,1
+North Kalimantan,2019-09-01,1,1,0
+North Kalimantan,2019-10-01,0,0,0
+North Kalimantan,2019-11-01,0,0,0
+North Kalimantan,2019-12-01,0,0,1
+North Kalimantan,2020-01-01,1,0,1
+North Kalimantan,2020-02-01,1,0,0
+North Kalimantan,2020-03-01,0,0,0
+North Kalimantan,2020-04-01,0,0,0
+North Kalimantan,2020-05-01,0,0,1
+North Kalimantan,2020-06-01,1,0,0
+North Kalimantan,2020-07-01,0,0,0
+North Kalimantan,2020-08-01,0,0,0
+North Kalimantan,2020-09-01,0,0,1
+North Kalimantan,2020-10-01,1,1,0
+North Kalimantan,2020-11-01,0,0,0
+North Kalimantan,2020-12-01,0,0,0
+North Kalimantan,2021-01-01,0,0,0
+North Kalimantan,2021-02-01,0,0,0
+North Kalimantan,2021-03-01,0,0,1
+North Kalimantan,2021-04-01,1,0,5
+North Kalimantan,2021-05-01,5,0,3
+North Kalimantan,2021-06-01,3,0,0
+North Kalimantan,2021-07-01,0,0,0
+North Kalimantan,2021-08-01,0,0,4
+North Kalimantan,2021-09-01,4,0,0
+North Kalimantan,2021-10-01,0,0,3
+North Kalimantan,2021-11-01,3,0,0
+North Kalimantan,2021-12-01,0,0,2
+North Kalimantan,2022-01-01,2,0,2
+North Kalimantan,2022-02-01,2,0,0
+North Kalimantan,2022-03-01,0,0,0
+North Kalimantan,2022-04-01,0,0,0
+North Kalimantan,2022-05-01,0,0,2
+North Kalimantan,2022-06-01,2,0,4
+North Kalimantan,2022-07-01,4,0,4
+North Kalimantan,2022-08-01,4,0,5
+North Kalimantan,2022-09-01,5,0,2
+North Kalimantan,2022-10-01,2,0,2
+North Kalimantan,2022-11-01,2,0,0
+North Kalimantan,2022-12-01,0,0,0
+North Kalimantan,2023-01-01,0,0,1
+North Kalimantan,2023-02-01,1,0,2
+North Kalimantan,2023-03-01,2,0,3
+North Kalimantan,2023-04-01,3,0,3
+North Kalimantan,2023-05-01,3,0,2
+North Kalimantan,2023-06-01,2,0,3
+North Kalimantan,2023-07-01,3,0,2
+North Kalimantan,2023-08-01,2,0,0
+North Kalimantan,2023-09-01,0,0,1
+North Kalimantan,2023-10-01,1,0,0
+North Kalimantan,2023-11-01,0,0,3
+North Kalimantan,2023-12-01,3,0,3
+North Kalimantan,2024-01-01,3,0,0
+North Kalimantan,2024-02-01,0,0,0
+North Kalimantan,2024-03-01,0,0,0
+North Kalimantan,2024-04-01,0,0,0
+North Kalimantan,2024-05-01,0,0,2
+North Kalimantan,2024-06-01,2,0,2
+North Kalimantan,2024-07-01,2,0,2
+North Kalimantan,2024-08-01,2,0,2
+North Kalimantan,2024-09-01,2,0,1
+North Kalimantan,2024-10-01,1,0,0
+North Kalimantan,2024-11-01,0,0,1
+North Kalimantan,2024-12-01,1,0,2
+North Kalimantan,2025-01-01,2,0,NA
+North Maluku,2019-01-01,0,0,0
+North Maluku,2019-02-01,0,0,0
+North Maluku,2019-03-01,0,0,0
+North Maluku,2019-04-01,0,0,0
+North Maluku,2019-05-01,0,0,1
+North Maluku,2019-06-01,1,0,1
+North Maluku,2019-07-01,1,0,2
+North Maluku,2019-08-01,2,1,1
+North Maluku,2019-09-01,1,0,0
+North Maluku,2019-10-01,0,0,0
+North Maluku,2019-11-01,0,0,2
+North Maluku,2019-12-01,2,1,1
+North Maluku,2020-01-01,1,0,0
+North Maluku,2020-02-01,0,0,1
+North Maluku,2020-03-01,1,1,1
+North Maluku,2020-04-01,1,0,1
+North Maluku,2020-05-01,1,0,0
+North Maluku,2020-06-01,0,0,0
+North Maluku,2020-07-01,0,0,1
+North Maluku,2020-08-01,1,0,0
+North Maluku,2020-09-01,0,0,0
+North Maluku,2020-10-01,0,0,0
+North Maluku,2020-11-01,0,0,1
+North Maluku,2020-12-01,1,1,0
+North Maluku,2021-01-01,0,0,0
+North Maluku,2021-02-01,0,0,0
+North Maluku,2021-03-01,0,0,0
+North Maluku,2021-04-01,0,0,1
+North Maluku,2021-05-01,1,0,0
+North Maluku,2021-06-01,0,0,1
+North Maluku,2021-07-01,1,0,0
+North Maluku,2021-08-01,0,0,0
+North Maluku,2021-09-01,0,0,1
+North Maluku,2021-10-01,1,0,2
+North Maluku,2021-11-01,2,0,1
+North Maluku,2021-12-01,1,0,0
+North Maluku,2022-01-01,0,0,1
+North Maluku,2022-02-01,1,0,2
+North Maluku,2022-03-01,2,0,2
+North Maluku,2022-04-01,2,2,2
+North Maluku,2022-05-01,2,0,1
+North Maluku,2022-06-01,1,0,0
+North Maluku,2022-07-01,0,0,2
+North Maluku,2022-08-01,2,0,7
+North Maluku,2022-09-01,7,0,5
+North Maluku,2022-10-01,5,0,6
+North Maluku,2022-11-01,6,0,4
+North Maluku,2022-12-01,4,1,5
+North Maluku,2023-01-01,5,0,1
+North Maluku,2023-02-01,1,0,3
+North Maluku,2023-03-01,3,0,0
+North Maluku,2023-04-01,0,0,10
+North Maluku,2023-05-01,10,0,8
+North Maluku,2023-06-01,8,0,4
+North Maluku,2023-07-01,4,0,2
+North Maluku,2023-08-01,2,0,2
+North Maluku,2023-09-01,2,0,8
+North Maluku,2023-10-01,8,2,6
+North Maluku,2023-11-01,6,0,9
+North Maluku,2023-12-01,9,1,2
+North Maluku,2024-01-01,2,0,4
+North Maluku,2024-02-01,4,0,1
+North Maluku,2024-03-01,1,0,2
+North Maluku,2024-04-01,2,0,8
+North Maluku,2024-05-01,8,0,1
+North Maluku,2024-06-01,1,1,5
+North Maluku,2024-07-01,5,0,7
+North Maluku,2024-08-01,7,0,6
+North Maluku,2024-09-01,6,0,4
+North Maluku,2024-10-01,4,0,5
+North Maluku,2024-11-01,5,1,9
+North Maluku,2024-12-01,9,0,4
+North Maluku,2025-01-01,4,0,NA
+North Sulawesi,2019-01-01,0,0,0
+North Sulawesi,2019-02-01,0,0,1
+North Sulawesi,2019-03-01,1,0,0
+North Sulawesi,2019-04-01,0,0,0
+North Sulawesi,2019-05-01,0,0,0
+North Sulawesi,2019-06-01,0,0,1
+North Sulawesi,2019-07-01,1,0,0
+North Sulawesi,2019-08-01,0,0,0
+North Sulawesi,2019-09-01,0,0,0
+North Sulawesi,2019-10-01,0,0,1
+North Sulawesi,2019-11-01,1,0,1
+North Sulawesi,2019-12-01,1,0,1
+North Sulawesi,2020-01-01,1,0,1
+North Sulawesi,2020-02-01,1,0,1
+North Sulawesi,2020-03-01,1,0,1
+North Sulawesi,2020-04-01,1,0,1
+North Sulawesi,2020-05-01,1,0,2
+North Sulawesi,2020-06-01,2,0,1
+North Sulawesi,2020-07-01,1,0,1
+North Sulawesi,2020-08-01,1,0,3
+North Sulawesi,2020-09-01,3,2,3
+North Sulawesi,2020-10-01,3,1,0
+North Sulawesi,2020-11-01,0,0,0
+North Sulawesi,2020-12-01,0,0,0
+North Sulawesi,2021-01-01,0,0,2
+North Sulawesi,2021-02-01,2,0,3
+North Sulawesi,2021-03-01,3,0,0
+North Sulawesi,2021-04-01,0,0,1
+North Sulawesi,2021-05-01,1,0,5
+North Sulawesi,2021-06-01,5,0,0
+North Sulawesi,2021-07-01,0,0,2
+North Sulawesi,2021-08-01,2,1,0
+North Sulawesi,2021-09-01,0,0,4
+North Sulawesi,2021-10-01,4,0,8
+North Sulawesi,2021-11-01,8,2,7
+North Sulawesi,2021-12-01,7,0,5
+North Sulawesi,2022-01-01,5,0,2
+North Sulawesi,2022-02-01,2,0,2
+North Sulawesi,2022-03-01,2,0,3
+North Sulawesi,2022-04-01,3,0,3
+North Sulawesi,2022-05-01,3,0,3
+North Sulawesi,2022-06-01,3,0,0
+North Sulawesi,2022-07-01,0,0,3
+North Sulawesi,2022-08-01,3,0,9
+North Sulawesi,2022-09-01,9,0,4
+North Sulawesi,2022-10-01,4,0,4
+North Sulawesi,2022-11-01,4,1,3
+North Sulawesi,2022-12-01,3,0,4
+North Sulawesi,2023-01-01,4,0,2
+North Sulawesi,2023-02-01,2,0,3
+North Sulawesi,2023-03-01,3,0,2
+North Sulawesi,2023-04-01,2,0,5
+North Sulawesi,2023-05-01,5,0,2
+North Sulawesi,2023-06-01,2,0,1
+North Sulawesi,2023-07-01,1,0,5
+North Sulawesi,2023-08-01,5,0,1
+North Sulawesi,2023-09-01,1,0,3
+North Sulawesi,2023-10-01,3,0,2
+North Sulawesi,2023-11-01,2,0,3
+North Sulawesi,2023-12-01,3,0,0
+North Sulawesi,2024-01-01,0,0,2
+North Sulawesi,2024-02-01,2,1,1
+North Sulawesi,2024-03-01,1,0,3
+North Sulawesi,2024-04-01,3,0,0
+North Sulawesi,2024-05-01,0,0,2
+North Sulawesi,2024-06-01,2,0,1
+North Sulawesi,2024-07-01,1,0,2
+North Sulawesi,2024-08-01,2,0,1
+North Sulawesi,2024-09-01,1,0,3
+North Sulawesi,2024-10-01,3,0,9
+North Sulawesi,2024-11-01,9,0,4
+North Sulawesi,2024-12-01,4,0,2
+North Sulawesi,2025-01-01,2,0,NA
+North Sumatra,2019-01-01,2,0,4
+North Sumatra,2019-02-01,4,0,6
+North Sumatra,2019-03-01,6,0,2
+North Sumatra,2019-04-01,2,0,8
+North Sumatra,2019-05-01,8,0,1
+North Sumatra,2019-06-01,1,0,0
+North Sumatra,2019-07-01,0,0,7
+North Sumatra,2019-08-01,7,0,16
+North Sumatra,2019-09-01,16,2,3
+North Sumatra,2019-10-01,3,0,11
+North Sumatra,2019-11-01,11,1,6
+North Sumatra,2019-12-01,6,0,12
+North Sumatra,2020-01-01,12,0,10
+North Sumatra,2020-02-01,10,0,3
+North Sumatra,2020-03-01,3,0,2
+North Sumatra,2020-04-01,2,0,7
+North Sumatra,2020-05-01,7,2,6
+North Sumatra,2020-06-01,6,0,9
+North Sumatra,2020-07-01,9,0,11
+North Sumatra,2020-08-01,11,0,11
+North Sumatra,2020-09-01,11,0,8
+North Sumatra,2020-10-01,8,1,7
+North Sumatra,2020-11-01,7,0,4
+North Sumatra,2020-12-01,4,0,4
+North Sumatra,2021-01-01,4,0,7
+North Sumatra,2021-02-01,7,0,7
+North Sumatra,2021-03-01,7,0,11
+North Sumatra,2021-04-01,11,0,9
+North Sumatra,2021-05-01,9,2,9
+North Sumatra,2021-06-01,9,0,6
+North Sumatra,2021-07-01,6,1,10
+North Sumatra,2021-08-01,10,0,8
+North Sumatra,2021-09-01,8,0,12
+North Sumatra,2021-10-01,12,0,11
+North Sumatra,2021-11-01,11,1,12
+North Sumatra,2021-12-01,12,2,13
+North Sumatra,2022-01-01,13,0,13
+North Sumatra,2022-02-01,13,0,16
+North Sumatra,2022-03-01,16,1,6
+North Sumatra,2022-04-01,6,0,7
+North Sumatra,2022-05-01,7,0,16
+North Sumatra,2022-06-01,16,2,11
+North Sumatra,2022-07-01,11,2,18
+North Sumatra,2022-08-01,18,1,40
+North Sumatra,2022-09-01,40,1,12
+North Sumatra,2022-10-01,12,0,11
+North Sumatra,2022-11-01,11,0,10
+North Sumatra,2022-12-01,10,0,7
+North Sumatra,2023-01-01,7,0,13
+North Sumatra,2023-02-01,13,0,24
+North Sumatra,2023-03-01,24,0,3
+North Sumatra,2023-04-01,3,0,16
+North Sumatra,2023-05-01,16,0,13
+North Sumatra,2023-06-01,13,0,10
+North Sumatra,2023-07-01,10,0,7
+North Sumatra,2023-08-01,7,0,19
+North Sumatra,2023-09-01,19,0,13
+North Sumatra,2023-10-01,13,0,7
+North Sumatra,2023-11-01,7,1,8
+North Sumatra,2023-12-01,8,0,6
+North Sumatra,2024-01-01,6,0,13
+North Sumatra,2024-02-01,13,0,15
+North Sumatra,2024-03-01,15,0,4
+North Sumatra,2024-04-01,4,0,19
+North Sumatra,2024-05-01,19,2,13
+North Sumatra,2024-06-01,13,0,14
+North Sumatra,2024-07-01,14,0,15
+North Sumatra,2024-08-01,15,1,12
+North Sumatra,2024-09-01,12,0,14
+North Sumatra,2024-10-01,14,0,13
+North Sumatra,2024-11-01,13,0,16
+North Sumatra,2024-12-01,16,0,12
+North Sumatra,2025-01-01,12,0,NA
+Papua,2019-01-01,4,0,2
+Papua,2019-02-01,2,0,9
+Papua,2019-03-01,9,1,5
+Papua,2019-04-01,5,0,3
+Papua,2019-05-01,3,0,1
+Papua,2019-06-01,1,0,4
+Papua,2019-07-01,4,0,8
+Papua,2019-08-01,8,1,2
+Papua,2019-09-01,2,2,0
+Papua,2019-10-01,0,0,1
+Papua,2019-11-01,1,1,2
+Papua,2019-12-01,2,0,2
+Papua,2020-01-01,2,0,5
+Papua,2020-02-01,5,0,6
+Papua,2020-03-01,6,0,3
+Papua,2020-04-01,3,0,2
+Papua,2020-05-01,2,0,10
+Papua,2020-06-01,10,0,8
+Papua,2020-07-01,8,0,7
+Papua,2020-08-01,7,3,3
+Papua,2020-09-01,3,2,4
+Papua,2020-10-01,4,1,3
+Papua,2020-11-01,3,0,3
+Papua,2020-12-01,3,0,2
+Papua,2021-01-01,2,0,4
+Papua,2021-02-01,4,1,9
+Papua,2021-03-01,9,2,2
+Papua,2021-04-01,2,1,1
+Papua,2021-05-01,1,0,2
+Papua,2021-06-01,2,0,3
+Papua,2021-07-01,3,1,11
+Papua,2021-08-01,11,3,7
+Papua,2021-09-01,7,2,5
+Papua,2021-10-01,5,0,6
+Papua,2021-11-01,6,2,9
+Papua,2021-12-01,9,1,2
+Papua,2022-01-01,2,0,1
+Papua,2022-02-01,1,0,7
+Papua,2022-03-01,7,1,5
+Papua,2022-04-01,5,2,4
+Papua,2022-05-01,4,0,8
+Papua,2022-06-01,8,2,10
+Papua,2022-07-01,10,1,4
+Papua,2022-08-01,4,1,13
+Papua,2022-09-01,13,1,6
+Papua,2022-10-01,6,0,5
+Papua,2022-11-01,5,1,7
+Papua,2022-12-01,7,2,7
+Papua,2023-01-01,7,1,0
+Papua,2023-02-01,0,0,15
+Papua,2023-03-01,15,1,9
+Papua,2023-04-01,9,5,5
+Papua,2023-05-01,5,0,10
+Papua,2023-06-01,10,0,14
+Papua,2023-07-01,14,1,17
+Papua,2023-08-01,17,3,11
+Papua,2023-09-01,11,0,15
+Papua,2023-10-01,15,0,12
+Papua,2023-11-01,12,0,10
+Papua,2023-12-01,10,0,2
+Papua,2024-01-01,2,0,3
+Papua,2024-02-01,3,0,7
+Papua,2024-03-01,7,0,13
+Papua,2024-04-01,13,2,11
+Papua,2024-05-01,11,1,6
+Papua,2024-06-01,6,0,11
+Papua,2024-07-01,11,0,12
+Papua,2024-08-01,12,4,11
+Papua,2024-09-01,11,0,18
+Papua,2024-10-01,18,0,17
+Papua,2024-11-01,17,0,11
+Papua,2024-12-01,11,0,9
+Papua,2025-01-01,9,0,NA
+Riau,2019-01-01,1,0,0
+Riau,2019-02-01,0,0,2
+Riau,2019-03-01,2,0,3
+Riau,2019-04-01,3,0,1
+Riau,2019-05-01,1,0,1
+Riau,2019-06-01,1,0,2
+Riau,2019-07-01,2,0,5
+Riau,2019-08-01,5,1,4
+Riau,2019-09-01,4,0,4
+Riau,2019-10-01,4,0,1
+Riau,2019-11-01,1,0,0
+Riau,2019-12-01,0,0,1
+Riau,2020-01-01,1,0,2
+Riau,2020-02-01,2,0,0
+Riau,2020-03-01,0,0,0
+Riau,2020-04-01,0,0,2
+Riau,2020-05-01,2,2,0
+Riau,2020-06-01,0,0,2
+Riau,2020-07-01,2,0,2
+Riau,2020-08-01,2,0,3
+Riau,2020-09-01,3,0,2
+Riau,2020-10-01,2,0,1
+Riau,2020-11-01,1,0,0
+Riau,2020-12-01,0,0,4
+Riau,2021-01-01,4,0,3
+Riau,2021-02-01,3,1,1
+Riau,2021-03-01,1,0,1
+Riau,2021-04-01,1,0,0
+Riau,2021-05-01,0,0,0
+Riau,2021-06-01,0,0,0
+Riau,2021-07-01,0,0,2
+Riau,2021-08-01,2,0,2
+Riau,2021-09-01,2,0,3
+Riau,2021-10-01,3,0,5
+Riau,2021-11-01,5,0,2
+Riau,2021-12-01,2,0,10
+Riau,2022-01-01,10,1,3
+Riau,2022-02-01,3,0,6
+Riau,2022-03-01,6,0,3
+Riau,2022-04-01,3,0,7
+Riau,2022-05-01,7,0,5
+Riau,2022-06-01,5,0,3
+Riau,2022-07-01,3,0,4
+Riau,2022-08-01,4,0,7
+Riau,2022-09-01,7,0,4
+Riau,2022-10-01,4,0,0
+Riau,2022-11-01,0,0,3
+Riau,2022-12-01,3,0,5
+Riau,2023-01-01,5,1,1
+Riau,2023-02-01,1,0,5
+Riau,2023-03-01,5,0,3
+Riau,2023-04-01,3,0,3
+Riau,2023-05-01,3,0,2
+Riau,2023-06-01,2,0,1
+Riau,2023-07-01,1,0,1
+Riau,2023-08-01,1,0,6
+Riau,2023-09-01,6,0,1
+Riau,2023-10-01,1,0,5
+Riau,2023-11-01,5,0,0
+Riau,2023-12-01,0,0,1
+Riau,2024-01-01,1,0,4
+Riau,2024-02-01,4,0,3
+Riau,2024-03-01,3,0,1
+Riau,2024-04-01,1,0,2
+Riau,2024-05-01,2,0,0
+Riau,2024-06-01,0,0,2
+Riau,2024-07-01,2,0,1
+Riau,2024-08-01,1,1,3
+Riau,2024-09-01,3,0,1
+Riau,2024-10-01,1,0,1
+Riau,2024-11-01,1,0,1
+Riau,2024-12-01,1,0,5
+Riau,2025-01-01,5,0,NA
+Riau Islands,2019-01-01,0,0,0
+Riau Islands,2019-02-01,0,0,1
+Riau Islands,2019-03-01,1,0,0
+Riau Islands,2019-04-01,0,0,1
+Riau Islands,2019-05-01,1,0,0
+Riau Islands,2019-06-01,0,0,1
+Riau Islands,2019-07-01,1,0,5
+Riau Islands,2019-08-01,5,0,2
+Riau Islands,2019-09-01,2,0,4
+Riau Islands,2019-10-01,4,0,3
+Riau Islands,2019-11-01,3,1,0
+Riau Islands,2019-12-01,0,0,0
+Riau Islands,2020-01-01,0,0,5
+Riau Islands,2020-02-01,5,0,1
+Riau Islands,2020-03-01,1,0,0
+Riau Islands,2020-04-01,0,0,0
+Riau Islands,2020-05-01,0,0,0
+Riau Islands,2020-06-01,0,0,0
+Riau Islands,2020-07-01,0,0,1
+Riau Islands,2020-08-01,1,0,2
+Riau Islands,2020-09-01,2,0,4
+Riau Islands,2020-10-01,4,2,2
+Riau Islands,2020-11-01,2,0,1
+Riau Islands,2020-12-01,1,1,0
+Riau Islands,2021-01-01,0,0,1
+Riau Islands,2021-02-01,1,0,1
+Riau Islands,2021-03-01,1,0,0
+Riau Islands,2021-04-01,0,0,1
+Riau Islands,2021-05-01,1,0,1
+Riau Islands,2021-06-01,1,1,2
+Riau Islands,2021-07-01,2,0,1
+Riau Islands,2021-08-01,1,0,2
+Riau Islands,2021-09-01,2,0,1
+Riau Islands,2021-10-01,1,0,6
+Riau Islands,2021-11-01,6,0,14
+Riau Islands,2021-12-01,14,0,7
+Riau Islands,2022-01-01,7,0,4
+Riau Islands,2022-02-01,4,1,5
+Riau Islands,2022-03-01,5,0,1
+Riau Islands,2022-04-01,1,0,5
+Riau Islands,2022-05-01,5,0,2
+Riau Islands,2022-06-01,2,0,2
+Riau Islands,2022-07-01,2,0,3
+Riau Islands,2022-08-01,3,1,6
+Riau Islands,2022-09-01,6,0,5
+Riau Islands,2022-10-01,5,0,3
+Riau Islands,2022-11-01,3,0,2
+Riau Islands,2022-12-01,2,0,1
+Riau Islands,2023-01-01,1,0,5
+Riau Islands,2023-02-01,5,0,6
+Riau Islands,2023-03-01,6,1,1
+Riau Islands,2023-04-01,1,0,2
+Riau Islands,2023-05-01,2,0,3
+Riau Islands,2023-06-01,3,0,2
+Riau Islands,2023-07-01,2,0,5
+Riau Islands,2023-08-01,5,0,10
+Riau Islands,2023-09-01,10,2,7
+Riau Islands,2023-10-01,7,0,6
+Riau Islands,2023-11-01,6,0,1
+Riau Islands,2023-12-01,1,0,0
+Riau Islands,2024-01-01,0,0,0
+Riau Islands,2024-02-01,0,0,0
+Riau Islands,2024-03-01,0,0,1
+Riau Islands,2024-04-01,1,0,5
+Riau Islands,2024-05-01,5,0,2
+Riau Islands,2024-06-01,2,0,3
+Riau Islands,2024-07-01,3,0,5
+Riau Islands,2024-08-01,5,0,5
+Riau Islands,2024-09-01,5,0,3
+Riau Islands,2024-10-01,3,1,1
+Riau Islands,2024-11-01,1,0,9
+Riau Islands,2024-12-01,9,0,7
+Riau Islands,2025-01-01,7,0,NA
+South Kalimantan,2019-01-01,0,0,0
+South Kalimantan,2019-02-01,0,0,0
+South Kalimantan,2019-03-01,0,0,0
+South Kalimantan,2019-04-01,0,0,1
+South Kalimantan,2019-05-01,1,0,0
+South Kalimantan,2019-06-01,0,0,1
+South Kalimantan,2019-07-01,1,0,1
+South Kalimantan,2019-08-01,1,0,4
+South Kalimantan,2019-09-01,4,0,1
+South Kalimantan,2019-10-01,1,0,3
+South Kalimantan,2019-11-01,3,0,1
+South Kalimantan,2019-12-01,1,0,1
+South Kalimantan,2020-01-01,1,0,2
+South Kalimantan,2020-02-01,2,0,0
+South Kalimantan,2020-03-01,0,0,1
+South Kalimantan,2020-04-01,1,1,0
+South Kalimantan,2020-05-01,0,0,4
+South Kalimantan,2020-06-01,4,0,1
+South Kalimantan,2020-07-01,1,0,0
+South Kalimantan,2020-08-01,0,0,1
+South Kalimantan,2020-09-01,1,0,6
+South Kalimantan,2020-10-01,6,1,2
+South Kalimantan,2020-11-01,2,1,0
+South Kalimantan,2020-12-01,0,0,0
+South Kalimantan,2021-01-01,0,0,3
+South Kalimantan,2021-02-01,3,1,2
+South Kalimantan,2021-03-01,2,0,2
+South Kalimantan,2021-04-01,2,0,1
+South Kalimantan,2021-05-01,1,0,2
+South Kalimantan,2021-06-01,2,0,4
+South Kalimantan,2021-07-01,4,0,1
+South Kalimantan,2021-08-01,1,0,2
+South Kalimantan,2021-09-01,2,0,2
+South Kalimantan,2021-10-01,2,0,5
+South Kalimantan,2021-11-01,5,0,6
+South Kalimantan,2021-12-01,6,0,7
+South Kalimantan,2022-01-01,7,0,1
+South Kalimantan,2022-02-01,1,0,5
+South Kalimantan,2022-03-01,5,0,3
+South Kalimantan,2022-04-01,3,0,5
+South Kalimantan,2022-05-01,5,0,1
+South Kalimantan,2022-06-01,1,0,1
+South Kalimantan,2022-07-01,1,0,2
+South Kalimantan,2022-08-01,2,0,14
+South Kalimantan,2022-09-01,14,0,5
+South Kalimantan,2022-10-01,5,0,3
+South Kalimantan,2022-11-01,3,0,7
+South Kalimantan,2022-12-01,7,0,1
+South Kalimantan,2023-01-01,1,0,3
+South Kalimantan,2023-02-01,3,0,3
+South Kalimantan,2023-03-01,3,0,1
+South Kalimantan,2023-04-01,1,0,5
+South Kalimantan,2023-05-01,5,0,1
+South Kalimantan,2023-06-01,1,0,0
+South Kalimantan,2023-07-01,0,0,1
+South Kalimantan,2023-08-01,1,0,5
+South Kalimantan,2023-09-01,5,0,5
+South Kalimantan,2023-10-01,5,0,5
+South Kalimantan,2023-11-01,5,0,1
+South Kalimantan,2023-12-01,1,0,0
+South Kalimantan,2024-01-01,0,0,1
+South Kalimantan,2024-02-01,1,0,1
+South Kalimantan,2024-03-01,1,0,0
+South Kalimantan,2024-04-01,0,0,5
+South Kalimantan,2024-05-01,5,0,2
+South Kalimantan,2024-06-01,2,0,4
+South Kalimantan,2024-07-01,4,0,7
+South Kalimantan,2024-08-01,7,0,9
+South Kalimantan,2024-09-01,9,0,3
+South Kalimantan,2024-10-01,3,0,3
+South Kalimantan,2024-11-01,3,0,5
+South Kalimantan,2024-12-01,5,0,3
+South Kalimantan,2025-01-01,3,0,NA
+South Papua,2019-01-01,1,0,1
+South Papua,2019-02-01,1,0,0
+South Papua,2019-03-01,0,0,0
+South Papua,2019-04-01,0,0,4
+South Papua,2019-05-01,4,0,2
+South Papua,2019-06-01,2,0,0
+South Papua,2019-07-01,0,0,1
+South Papua,2019-08-01,1,0,1
+South Papua,2019-09-01,1,0,1
+South Papua,2019-10-01,1,0,0
+South Papua,2019-11-01,0,0,2
+South Papua,2019-12-01,2,0,1
+South Papua,2020-01-01,1,0,1
+South Papua,2020-02-01,1,0,0
+South Papua,2020-03-01,0,0,0
+South Papua,2020-04-01,0,0,1
+South Papua,2020-05-01,1,0,1
+South Papua,2020-06-01,1,0,1
+South Papua,2020-07-01,1,0,4
+South Papua,2020-08-01,4,0,2
+South Papua,2020-09-01,2,0,0
+South Papua,2020-10-01,0,0,1
+South Papua,2020-11-01,1,0,0
+South Papua,2020-12-01,0,0,0
+South Papua,2021-01-01,0,0,1
+South Papua,2021-02-01,1,0,2
+South Papua,2021-03-01,2,0,0
+South Papua,2021-04-01,0,0,1
+South Papua,2021-05-01,1,0,0
+South Papua,2021-06-01,0,0,0
+South Papua,2021-07-01,0,0,2
+South Papua,2021-08-01,2,1,0
+South Papua,2021-09-01,0,0,0
+South Papua,2021-10-01,0,0,1
+South Papua,2021-11-01,1,0,0
+South Papua,2021-12-01,0,0,0
+South Papua,2022-01-01,0,0,0
+South Papua,2022-02-01,0,0,1
+South Papua,2022-03-01,1,0,2
+South Papua,2022-04-01,2,0,1
+South Papua,2022-05-01,1,0,3
+South Papua,2022-06-01,3,1,1
+South Papua,2022-07-01,1,0,0
+South Papua,2022-08-01,0,0,1
+South Papua,2022-09-01,1,0,0
+South Papua,2022-10-01,0,0,0
+South Papua,2022-11-01,0,0,1
+South Papua,2022-12-01,1,0,0
+South Papua,2023-01-01,0,0,0
+South Papua,2023-02-01,0,0,0
+South Papua,2023-03-01,0,0,1
+South Papua,2023-04-01,1,0,0
+South Papua,2023-05-01,0,0,1
+South Papua,2023-06-01,1,0,2
+South Papua,2023-07-01,2,0,2
+South Papua,2023-08-01,2,0,0
+South Papua,2023-09-01,0,0,3
+South Papua,2023-10-01,3,0,2
+South Papua,2023-11-01,2,1,0
+South Papua,2023-12-01,0,0,2
+South Papua,2024-01-01,2,0,1
+South Papua,2024-02-01,1,0,3
+South Papua,2024-03-01,3,0,2
+South Papua,2024-04-01,2,0,1
+South Papua,2024-05-01,1,0,1
+South Papua,2024-06-01,1,0,1
+South Papua,2024-07-01,1,0,4
+South Papua,2024-08-01,4,0,3
+South Papua,2024-09-01,3,0,1
+South Papua,2024-10-01,1,0,0
+South Papua,2024-11-01,0,0,1
+South Papua,2024-12-01,1,0,2
+South Papua,2025-01-01,2,0,NA
+South Sulawesi,2019-01-01,1,0,2
+South Sulawesi,2019-02-01,2,0,5
+South Sulawesi,2019-03-01,5,1,2
+South Sulawesi,2019-04-01,2,0,6
+South Sulawesi,2019-05-01,6,0,5
+South Sulawesi,2019-06-01,5,0,4
+South Sulawesi,2019-07-01,4,0,15
+South Sulawesi,2019-08-01,15,1,26
+South Sulawesi,2019-09-01,26,2,15
+South Sulawesi,2019-10-01,15,0,17
+South Sulawesi,2019-11-01,17,3,15
+South Sulawesi,2019-12-01,15,1,8
+South Sulawesi,2020-01-01,8,0,6
+South Sulawesi,2020-02-01,6,0,10
+South Sulawesi,2020-03-01,10,0,1
+South Sulawesi,2020-04-01,1,1,1
+South Sulawesi,2020-05-01,1,0,13
+South Sulawesi,2020-06-01,13,0,35
+South Sulawesi,2020-07-01,35,5,21
+South Sulawesi,2020-08-01,21,0,16
+South Sulawesi,2020-09-01,16,3,38
+South Sulawesi,2020-10-01,38,1,6
+South Sulawesi,2020-11-01,6,0,7
+South Sulawesi,2020-12-01,7,2,2
+South Sulawesi,2021-01-01,2,0,10
+South Sulawesi,2021-02-01,10,0,8
+South Sulawesi,2021-03-01,8,2,2
+South Sulawesi,2021-04-01,2,0,8
+South Sulawesi,2021-05-01,8,2,11
+South Sulawesi,2021-06-01,11,1,7
+South Sulawesi,2021-07-01,7,0,2
+South Sulawesi,2021-08-01,2,0,6
+South Sulawesi,2021-09-01,6,0,11
+South Sulawesi,2021-10-01,11,0,3
+South Sulawesi,2021-11-01,3,1,15
+South Sulawesi,2021-12-01,15,0,11
+South Sulawesi,2022-01-01,11,0,5
+South Sulawesi,2022-02-01,5,0,16
+South Sulawesi,2022-03-01,16,0,16
+South Sulawesi,2022-04-01,16,1,14
+South Sulawesi,2022-05-01,14,1,4
+South Sulawesi,2022-06-01,4,0,8
+South Sulawesi,2022-07-01,8,2,14
+South Sulawesi,2022-08-01,14,1,40
+South Sulawesi,2022-09-01,40,1,11
+South Sulawesi,2022-10-01,11,0,13
+South Sulawesi,2022-11-01,13,1,8
+South Sulawesi,2022-12-01,8,0,10
+South Sulawesi,2023-01-01,10,0,6
+South Sulawesi,2023-02-01,6,0,10
+South Sulawesi,2023-03-01,10,0,14
+South Sulawesi,2023-04-01,14,0,7
+South Sulawesi,2023-05-01,7,1,9
+South Sulawesi,2023-06-01,9,0,7
+South Sulawesi,2023-07-01,7,1,7
+South Sulawesi,2023-08-01,7,0,6
+South Sulawesi,2023-09-01,6,0,19
+South Sulawesi,2023-10-01,19,1,17
+South Sulawesi,2023-11-01,17,2,12
+South Sulawesi,2023-12-01,12,2,4
+South Sulawesi,2024-01-01,4,0,13
+South Sulawesi,2024-02-01,13,0,3
+South Sulawesi,2024-03-01,3,1,10
+South Sulawesi,2024-04-01,10,0,13
+South Sulawesi,2024-05-01,13,2,9
+South Sulawesi,2024-06-01,9,1,19
+South Sulawesi,2024-07-01,19,2,20
+South Sulawesi,2024-08-01,20,2,13
+South Sulawesi,2024-09-01,13,1,26
+South Sulawesi,2024-10-01,26,0,9
+South Sulawesi,2024-11-01,9,0,26
+South Sulawesi,2024-12-01,26,0,11
+South Sulawesi,2025-01-01,11,1,NA
+South Sumatra,2019-01-01,0,0,0
+South Sumatra,2019-02-01,0,0,0
+South Sumatra,2019-03-01,0,0,0
+South Sumatra,2019-04-01,0,0,3
+South Sumatra,2019-05-01,3,0,0
+South Sumatra,2019-06-01,0,0,2
+South Sumatra,2019-07-01,2,0,0
+South Sumatra,2019-08-01,0,0,4
+South Sumatra,2019-09-01,4,0,2
+South Sumatra,2019-10-01,2,0,0
+South Sumatra,2019-11-01,0,0,1
+South Sumatra,2019-12-01,1,0,0
+South Sumatra,2020-01-01,0,0,3
+South Sumatra,2020-02-01,3,0,3
+South Sumatra,2020-03-01,3,0,0
+South Sumatra,2020-04-01,0,0,1
+South Sumatra,2020-05-01,1,0,1
+South Sumatra,2020-06-01,1,0,0
+South Sumatra,2020-07-01,0,0,1
+South Sumatra,2020-08-01,1,0,3
+South Sumatra,2020-09-01,3,0,2
+South Sumatra,2020-10-01,2,1,1
+South Sumatra,2020-11-01,1,0,1
+South Sumatra,2020-12-01,1,0,1
+South Sumatra,2021-01-01,1,0,1
+South Sumatra,2021-02-01,1,0,0
+South Sumatra,2021-03-01,0,0,3
+South Sumatra,2021-04-01,3,0,3
+South Sumatra,2021-05-01,3,0,0
+South Sumatra,2021-06-01,0,0,4
+South Sumatra,2021-07-01,4,0,0
+South Sumatra,2021-08-01,0,0,1
+South Sumatra,2021-09-01,1,0,2
+South Sumatra,2021-10-01,2,0,5
+South Sumatra,2021-11-01,5,0,3
+South Sumatra,2021-12-01,3,0,5
+South Sumatra,2022-01-01,5,0,1
+South Sumatra,2022-02-01,1,0,5
+South Sumatra,2022-03-01,5,0,4
+South Sumatra,2022-04-01,4,0,3
+South Sumatra,2022-05-01,3,0,6
+South Sumatra,2022-06-01,6,0,1
+South Sumatra,2022-07-01,1,0,1
+South Sumatra,2022-08-01,1,0,15
+South Sumatra,2022-09-01,15,0,1
+South Sumatra,2022-10-01,1,0,2
+South Sumatra,2022-11-01,2,0,6
+South Sumatra,2022-12-01,6,0,4
+South Sumatra,2023-01-01,4,0,7
+South Sumatra,2023-02-01,7,0,4
+South Sumatra,2023-03-01,4,0,3
+South Sumatra,2023-04-01,3,0,10
+South Sumatra,2023-05-01,10,0,6
+South Sumatra,2023-06-01,6,0,7
+South Sumatra,2023-07-01,7,0,2
+South Sumatra,2023-08-01,2,0,2
+South Sumatra,2023-09-01,2,0,3
+South Sumatra,2023-10-01,3,0,9
+South Sumatra,2023-11-01,9,0,3
+South Sumatra,2023-12-01,3,0,3
+South Sumatra,2024-01-01,3,0,4
+South Sumatra,2024-02-01,4,0,4
+South Sumatra,2024-03-01,4,0,6
+South Sumatra,2024-04-01,6,0,4
+South Sumatra,2024-05-01,4,0,7
+South Sumatra,2024-06-01,7,0,6
+South Sumatra,2024-07-01,6,0,10
+South Sumatra,2024-08-01,10,1,9
+South Sumatra,2024-09-01,9,2,7
+South Sumatra,2024-10-01,7,0,2
+South Sumatra,2024-11-01,2,0,4
+South Sumatra,2024-12-01,4,0,5
+South Sumatra,2025-01-01,5,0,NA
+Southeast Sulawesi,2019-01-01,0,0,1
+Southeast Sulawesi,2019-02-01,1,0,3
+Southeast Sulawesi,2019-03-01,3,0,0
+Southeast Sulawesi,2019-04-01,0,0,3
+Southeast Sulawesi,2019-05-01,3,0,0
+Southeast Sulawesi,2019-06-01,0,0,0
+Southeast Sulawesi,2019-07-01,0,0,0
+Southeast Sulawesi,2019-08-01,0,0,4
+Southeast Sulawesi,2019-09-01,4,0,3
+Southeast Sulawesi,2019-10-01,3,0,1
+Southeast Sulawesi,2019-11-01,1,0,2
+Southeast Sulawesi,2019-12-01,2,0,2
+Southeast Sulawesi,2020-01-01,2,0,0
+Southeast Sulawesi,2020-02-01,0,0,3
+Southeast Sulawesi,2020-03-01,3,2,0
+Southeast Sulawesi,2020-04-01,0,0,0
+Southeast Sulawesi,2020-05-01,0,0,1
+Southeast Sulawesi,2020-06-01,1,0,6
+Southeast Sulawesi,2020-07-01,6,1,0
+Southeast Sulawesi,2020-08-01,0,0,4
+Southeast Sulawesi,2020-09-01,4,2,3
+Southeast Sulawesi,2020-10-01,3,1,1
+Southeast Sulawesi,2020-11-01,1,0,1
+Southeast Sulawesi,2020-12-01,1,0,0
+Southeast Sulawesi,2021-01-01,0,0,0
+Southeast Sulawesi,2021-02-01,0,0,1
+Southeast Sulawesi,2021-03-01,1,1,1
+Southeast Sulawesi,2021-04-01,1,0,2
+Southeast Sulawesi,2021-05-01,2,0,1
+Southeast Sulawesi,2021-06-01,1,1,3
+Southeast Sulawesi,2021-07-01,3,0,10
+Southeast Sulawesi,2021-08-01,10,1,8
+Southeast Sulawesi,2021-09-01,8,1,5
+Southeast Sulawesi,2021-10-01,5,0,3
+Southeast Sulawesi,2021-11-01,3,0,6
+Southeast Sulawesi,2021-12-01,6,0,4
+Southeast Sulawesi,2022-01-01,4,0,4
+Southeast Sulawesi,2022-02-01,4,1,15
+Southeast Sulawesi,2022-03-01,15,1,2
+Southeast Sulawesi,2022-04-01,2,0,5
+Southeast Sulawesi,2022-05-01,5,0,6
+Southeast Sulawesi,2022-06-01,6,0,4
+Southeast Sulawesi,2022-07-01,4,0,2
+Southeast Sulawesi,2022-08-01,2,0,16
+Southeast Sulawesi,2022-09-01,16,0,1
+Southeast Sulawesi,2022-10-01,1,0,3
+Southeast Sulawesi,2022-11-01,3,1,2
+Southeast Sulawesi,2022-12-01,2,0,1
+Southeast Sulawesi,2023-01-01,1,0,4
+Southeast Sulawesi,2023-02-01,4,0,0
+Southeast Sulawesi,2023-03-01,0,0,1
+Southeast Sulawesi,2023-04-01,1,0,9
+Southeast Sulawesi,2023-05-01,9,0,7
+Southeast Sulawesi,2023-06-01,7,0,2
+Southeast Sulawesi,2023-07-01,2,0,2
+Southeast Sulawesi,2023-08-01,2,0,3
+Southeast Sulawesi,2023-09-01,3,1,4
+Southeast Sulawesi,2023-10-01,4,0,5
+Southeast Sulawesi,2023-11-01,5,0,3
+Southeast Sulawesi,2023-12-01,3,0,1
+Southeast Sulawesi,2024-01-01,1,0,4
+Southeast Sulawesi,2024-02-01,4,0,7
+Southeast Sulawesi,2024-03-01,7,1,6
+Southeast Sulawesi,2024-04-01,6,0,10
+Southeast Sulawesi,2024-05-01,10,0,0
+Southeast Sulawesi,2024-06-01,0,0,4
+Southeast Sulawesi,2024-07-01,4,0,6
+Southeast Sulawesi,2024-08-01,6,0,6
+Southeast Sulawesi,2024-09-01,6,1,6
+Southeast Sulawesi,2024-10-01,6,0,4
+Southeast Sulawesi,2024-11-01,4,0,8
+Southeast Sulawesi,2024-12-01,8,0,7
+Southeast Sulawesi,2025-01-01,7,0,NA
+Southwest Papua,2019-01-01,0,0,0
+Southwest Papua,2019-02-01,0,0,0
+Southwest Papua,2019-03-01,0,0,1
+Southwest Papua,2019-04-01,1,0,0
+Southwest Papua,2019-05-01,0,0,0
+Southwest Papua,2019-06-01,0,0,0
+Southwest Papua,2019-07-01,0,0,4
+Southwest Papua,2019-08-01,4,0,3
+Southwest Papua,2019-09-01,3,2,0
+Southwest Papua,2019-10-01,0,0,2
+Southwest Papua,2019-11-01,2,1,1
+Southwest Papua,2019-12-01,1,0,0
+Southwest Papua,2020-01-01,0,0,2
+Southwest Papua,2020-02-01,2,1,3
+Southwest Papua,2020-03-01,3,0,0
+Southwest Papua,2020-04-01,0,0,0
+Southwest Papua,2020-05-01,0,0,1
+Southwest Papua,2020-06-01,1,0,6
+Southwest Papua,2020-07-01,6,1,4
+Southwest Papua,2020-08-01,4,0,3
+Southwest Papua,2020-09-01,3,0,2
+Southwest Papua,2020-10-01,2,0,3
+Southwest Papua,2020-11-01,3,0,1
+Southwest Papua,2020-12-01,1,0,4
+Southwest Papua,2021-01-01,4,0,2
+Southwest Papua,2021-02-01,2,0,5
+Southwest Papua,2021-03-01,5,0,5
+Southwest Papua,2021-04-01,5,0,5
+Southwest Papua,2021-05-01,5,0,4
+Southwest Papua,2021-06-01,4,0,2
+Southwest Papua,2021-07-01,2,1,5
+Southwest Papua,2021-08-01,5,0,1
+Southwest Papua,2021-09-01,1,0,0
+Southwest Papua,2021-10-01,0,0,2
+Southwest Papua,2021-11-01,2,0,5
+Southwest Papua,2021-12-01,5,0,4
+Southwest Papua,2022-01-01,4,0,1
+Southwest Papua,2022-02-01,1,0,4
+Southwest Papua,2022-03-01,4,0,4
+Southwest Papua,2022-04-01,4,0,2
+Southwest Papua,2022-05-01,2,0,1
+Southwest Papua,2022-06-01,1,1,3
+Southwest Papua,2022-07-01,3,0,6
+Southwest Papua,2022-08-01,6,0,5
+Southwest Papua,2022-09-01,5,1,3
+Southwest Papua,2022-10-01,3,0,1
+Southwest Papua,2022-11-01,1,0,5
+Southwest Papua,2022-12-01,5,2,3
+Southwest Papua,2023-01-01,3,0,2
+Southwest Papua,2023-02-01,2,0,5
+Southwest Papua,2023-03-01,5,0,5
+Southwest Papua,2023-04-01,5,0,2
+Southwest Papua,2023-05-01,2,1,7
+Southwest Papua,2023-06-01,7,1,7
+Southwest Papua,2023-07-01,7,0,6
+Southwest Papua,2023-08-01,6,0,10
+Southwest Papua,2023-09-01,10,0,8
+Southwest Papua,2023-10-01,8,1,7
+Southwest Papua,2023-11-01,7,0,6
+Southwest Papua,2023-12-01,6,0,2
+Southwest Papua,2024-01-01,2,0,3
+Southwest Papua,2024-02-01,3,0,7
+Southwest Papua,2024-03-01,7,0,5
+Southwest Papua,2024-04-01,5,0,6
+Southwest Papua,2024-05-01,6,1,9
+Southwest Papua,2024-06-01,9,0,0
+Southwest Papua,2024-07-01,0,0,12
+Southwest Papua,2024-08-01,12,0,10
+Southwest Papua,2024-09-01,10,0,11
+Southwest Papua,2024-10-01,11,0,3
+Southwest Papua,2024-11-01,3,0,12
+Southwest Papua,2024-12-01,12,1,6
+Southwest Papua,2025-01-01,6,0,NA
+West Java,2019-01-01,1,0,8
+West Java,2019-02-01,8,0,2
+West Java,2019-03-01,2,0,5
+West Java,2019-04-01,5,0,10
+West Java,2019-05-01,10,1,1
+West Java,2019-06-01,1,0,6
+West Java,2019-07-01,6,1,13
+West Java,2019-08-01,13,1,29
+West Java,2019-09-01,29,6,10
+West Java,2019-10-01,10,0,18
+West Java,2019-11-01,18,0,11
+West Java,2019-12-01,11,0,12
+West Java,2020-01-01,12,0,10
+West Java,2020-02-01,10,1,9
+West Java,2020-03-01,9,0,3
+West Java,2020-04-01,3,0,2
+West Java,2020-05-01,2,0,16
+West Java,2020-06-01,16,1,21
+West Java,2020-07-01,21,4,8
+West Java,2020-08-01,8,0,16
+West Java,2020-09-01,16,2,47
+West Java,2020-10-01,47,5,20
+West Java,2020-11-01,20,1,17
+West Java,2020-12-01,17,1,5
+West Java,2021-01-01,5,0,3
+West Java,2021-02-01,3,0,6
+West Java,2021-03-01,6,0,8
+West Java,2021-04-01,8,0,33
+West Java,2021-05-01,33,0,9
+West Java,2021-06-01,9,0,5
+West Java,2021-07-01,5,1,9
+West Java,2021-08-01,9,1,13
+West Java,2021-09-01,13,1,31
+West Java,2021-10-01,31,1,41
+West Java,2021-11-01,41,0,13
+West Java,2021-12-01,13,0,21
+West Java,2022-01-01,21,0,17
+West Java,2022-02-01,17,0,23
+West Java,2022-03-01,23,0,26
+West Java,2022-04-01,26,1,13
+West Java,2022-05-01,13,1,23
+West Java,2022-06-01,23,0,20
+West Java,2022-07-01,20,0,20
+West Java,2022-08-01,20,0,85
+West Java,2022-09-01,85,1,13
+West Java,2022-10-01,13,0,20
+West Java,2022-11-01,20,0,20
+West Java,2022-12-01,20,0,22
+West Java,2023-01-01,22,0,13
+West Java,2023-02-01,13,0,21
+West Java,2023-03-01,21,0,9
+West Java,2023-04-01,9,0,34
+West Java,2023-05-01,34,0,18
+West Java,2023-06-01,18,1,32
+West Java,2023-07-01,32,1,17
+West Java,2023-08-01,17,0,20
+West Java,2023-09-01,20,0,36
+West Java,2023-10-01,36,0,62
+West Java,2023-11-01,62,0,24
+West Java,2023-12-01,24,0,22
+West Java,2024-01-01,22,0,21
+West Java,2024-02-01,21,0,21
+West Java,2024-03-01,21,0,12
+West Java,2024-04-01,12,1,35
+West Java,2024-05-01,35,0,30
+West Java,2024-06-01,30,0,31
+West Java,2024-07-01,31,0,46
+West Java,2024-08-01,46,0,22
+West Java,2024-09-01,22,1,22
+West Java,2024-10-01,22,0,24
+West Java,2024-11-01,24,0,27
+West Java,2024-12-01,27,0,34
+West Java,2025-01-01,34,0,NA
+West Kalimantan,2019-01-01,0,0,1
+West Kalimantan,2019-02-01,1,0,1
+West Kalimantan,2019-03-01,1,0,1
+West Kalimantan,2019-04-01,1,0,1
+West Kalimantan,2019-05-01,1,0,0
+West Kalimantan,2019-06-01,0,0,1
+West Kalimantan,2019-07-01,1,0,0
+West Kalimantan,2019-08-01,0,0,6
+West Kalimantan,2019-09-01,6,0,0
+West Kalimantan,2019-10-01,0,0,2
+West Kalimantan,2019-11-01,2,0,1
+West Kalimantan,2019-12-01,1,0,2
+West Kalimantan,2020-01-01,2,0,0
+West Kalimantan,2020-02-01,0,0,0
+West Kalimantan,2020-03-01,0,0,0
+West Kalimantan,2020-04-01,0,0,0
+West Kalimantan,2020-05-01,0,0,2
+West Kalimantan,2020-06-01,2,0,0
+West Kalimantan,2020-07-01,0,0,1
+West Kalimantan,2020-08-01,1,0,5
+West Kalimantan,2020-09-01,5,0,4
+West Kalimantan,2020-10-01,4,2,0
+West Kalimantan,2020-11-01,0,0,0
+West Kalimantan,2020-12-01,0,0,0
+West Kalimantan,2021-01-01,0,0,1
+West Kalimantan,2021-02-01,1,0,2
+West Kalimantan,2021-03-01,2,0,0
+West Kalimantan,2021-04-01,0,0,0
+West Kalimantan,2021-05-01,0,0,2
+West Kalimantan,2021-06-01,2,0,2
+West Kalimantan,2021-07-01,2,0,1
+West Kalimantan,2021-08-01,1,0,3
+West Kalimantan,2021-09-01,3,0,0
+West Kalimantan,2021-10-01,0,0,1
+West Kalimantan,2021-11-01,1,0,2
+West Kalimantan,2021-12-01,2,0,1
+West Kalimantan,2022-01-01,1,0,5
+West Kalimantan,2022-02-01,5,0,3
+West Kalimantan,2022-03-01,3,0,4
+West Kalimantan,2022-04-01,4,0,2
+West Kalimantan,2022-05-01,2,0,3
+West Kalimantan,2022-06-01,3,0,3
+West Kalimantan,2022-07-01,3,0,2
+West Kalimantan,2022-08-01,2,0,7
+West Kalimantan,2022-09-01,7,0,8
+West Kalimantan,2022-10-01,8,0,2
+West Kalimantan,2022-11-01,2,0,4
+West Kalimantan,2022-12-01,4,0,1
+West Kalimantan,2023-01-01,1,0,4
+West Kalimantan,2023-02-01,4,0,4
+West Kalimantan,2023-03-01,4,1,3
+West Kalimantan,2023-04-01,3,0,5
+West Kalimantan,2023-05-01,5,0,3
+West Kalimantan,2023-06-01,3,0,2
+West Kalimantan,2023-07-01,2,0,7
+West Kalimantan,2023-08-01,7,0,3
+West Kalimantan,2023-09-01,3,0,5
+West Kalimantan,2023-10-01,5,0,6
+West Kalimantan,2023-11-01,6,0,0
+West Kalimantan,2023-12-01,0,0,6
+West Kalimantan,2024-01-01,6,0,5
+West Kalimantan,2024-02-01,5,0,6
+West Kalimantan,2024-03-01,6,0,5
+West Kalimantan,2024-04-01,5,0,6
+West Kalimantan,2024-05-01,6,0,3
+West Kalimantan,2024-06-01,3,0,5
+West Kalimantan,2024-07-01,5,0,4
+West Kalimantan,2024-08-01,4,0,4
+West Kalimantan,2024-09-01,4,0,7
+West Kalimantan,2024-10-01,7,0,4
+West Kalimantan,2024-11-01,4,0,1
+West Kalimantan,2024-12-01,1,0,4
+West Kalimantan,2025-01-01,4,0,NA
+West Nusa Tenggara,2019-01-01,1,0,1
+West Nusa Tenggara,2019-02-01,1,0,0
+West Nusa Tenggara,2019-03-01,0,0,0
+West Nusa Tenggara,2019-04-01,0,0,2
+West Nusa Tenggara,2019-05-01,2,0,1
+West Nusa Tenggara,2019-06-01,1,0,1
+West Nusa Tenggara,2019-07-01,1,0,0
+West Nusa Tenggara,2019-08-01,0,0,3
+West Nusa Tenggara,2019-09-01,3,1,2
+West Nusa Tenggara,2019-10-01,2,0,2
+West Nusa Tenggara,2019-11-01,2,0,0
+West Nusa Tenggara,2019-12-01,0,0,0
+West Nusa Tenggara,2020-01-01,0,0,2
+West Nusa Tenggara,2020-02-01,2,0,2
+West Nusa Tenggara,2020-03-01,2,1,2
+West Nusa Tenggara,2020-04-01,2,0,1
+West Nusa Tenggara,2020-05-01,1,0,1
+West Nusa Tenggara,2020-06-01,1,0,3
+West Nusa Tenggara,2020-07-01,3,1,0
+West Nusa Tenggara,2020-08-01,0,0,1
+West Nusa Tenggara,2020-09-01,1,0,2
+West Nusa Tenggara,2020-10-01,2,0,1
+West Nusa Tenggara,2020-11-01,1,0,0
+West Nusa Tenggara,2020-12-01,0,0,2
+West Nusa Tenggara,2021-01-01,2,0,1
+West Nusa Tenggara,2021-02-01,1,0,0
+West Nusa Tenggara,2021-03-01,0,0,1
+West Nusa Tenggara,2021-04-01,1,0,2
+West Nusa Tenggara,2021-05-01,2,0,3
+West Nusa Tenggara,2021-06-01,3,1,3
+West Nusa Tenggara,2021-07-01,3,0,0
+West Nusa Tenggara,2021-08-01,0,0,2
+West Nusa Tenggara,2021-09-01,2,0,2
+West Nusa Tenggara,2021-10-01,2,1,0
+West Nusa Tenggara,2021-11-01,0,0,0
+West Nusa Tenggara,2021-12-01,0,0,4
+West Nusa Tenggara,2022-01-01,4,0,3
+West Nusa Tenggara,2022-02-01,3,0,3
+West Nusa Tenggara,2022-03-01,3,0,8
+West Nusa Tenggara,2022-04-01,8,0,9
+West Nusa Tenggara,2022-05-01,9,1,2
+West Nusa Tenggara,2022-06-01,2,0,4
+West Nusa Tenggara,2022-07-01,4,0,6
+West Nusa Tenggara,2022-08-01,6,0,18
+West Nusa Tenggara,2022-09-01,18,2,4
+West Nusa Tenggara,2022-10-01,4,0,11
+West Nusa Tenggara,2022-11-01,11,4,4
+West Nusa Tenggara,2022-12-01,4,0,4
+West Nusa Tenggara,2023-01-01,4,0,6
+West Nusa Tenggara,2023-02-01,6,0,5
+West Nusa Tenggara,2023-03-01,5,0,4
+West Nusa Tenggara,2023-04-01,4,0,14
+West Nusa Tenggara,2023-05-01,14,2,9
+West Nusa Tenggara,2023-06-01,9,2,4
+West Nusa Tenggara,2023-07-01,4,0,3
+West Nusa Tenggara,2023-08-01,3,0,5
+West Nusa Tenggara,2023-09-01,5,0,7
+West Nusa Tenggara,2023-10-01,7,0,7
+West Nusa Tenggara,2023-11-01,7,0,3
+West Nusa Tenggara,2023-12-01,3,0,11
+West Nusa Tenggara,2024-01-01,11,1,7
+West Nusa Tenggara,2024-02-01,7,0,4
+West Nusa Tenggara,2024-03-01,4,0,9
+West Nusa Tenggara,2024-04-01,9,2,6
+West Nusa Tenggara,2024-05-01,6,0,4
+West Nusa Tenggara,2024-06-01,4,0,6
+West Nusa Tenggara,2024-07-01,6,0,4
+West Nusa Tenggara,2024-08-01,4,0,3
+West Nusa Tenggara,2024-09-01,3,0,8
+West Nusa Tenggara,2024-10-01,8,0,3
+West Nusa Tenggara,2024-11-01,3,0,0
+West Nusa Tenggara,2024-12-01,0,0,11
+West Nusa Tenggara,2025-01-01,11,0,NA
+West Papua,2019-01-01,1,0,1
+West Papua,2019-02-01,1,0,1
+West Papua,2019-03-01,1,0,1
+West Papua,2019-04-01,1,0,2
+West Papua,2019-05-01,2,0,1
+West Papua,2019-06-01,1,0,2
+West Papua,2019-07-01,2,0,4
+West Papua,2019-08-01,4,1,5
+West Papua,2019-09-01,5,0,1
+West Papua,2019-10-01,1,0,0
+West Papua,2019-11-01,0,0,3
+West Papua,2019-12-01,3,1,0
+West Papua,2020-01-01,0,0,2
+West Papua,2020-02-01,2,0,2
+West Papua,2020-03-01,2,0,0
+West Papua,2020-04-01,0,0,0
+West Papua,2020-05-01,0,0,2
+West Papua,2020-06-01,2,1,4
+West Papua,2020-07-01,4,0,4
+West Papua,2020-08-01,4,0,5
+West Papua,2020-09-01,5,0,3
+West Papua,2020-10-01,3,0,4
+West Papua,2020-11-01,4,1,3
+West Papua,2020-12-01,3,0,1
+West Papua,2021-01-01,1,0,2
+West Papua,2021-02-01,2,0,2
+West Papua,2021-03-01,2,0,1
+West Papua,2021-04-01,1,0,4
+West Papua,2021-05-01,4,2,2
+West Papua,2021-06-01,2,0,6
+West Papua,2021-07-01,6,1,3
+West Papua,2021-08-01,3,0,0
+West Papua,2021-09-01,0,0,1
+West Papua,2021-10-01,1,0,1
+West Papua,2021-11-01,1,0,0
+West Papua,2021-12-01,0,0,0
+West Papua,2022-01-01,0,0,2
+West Papua,2022-02-01,2,1,6
+West Papua,2022-03-01,6,0,2
+West Papua,2022-04-01,2,0,5
+West Papua,2022-05-01,5,0,10
+West Papua,2022-06-01,10,0,8
+West Papua,2022-07-01,8,1,2
+West Papua,2022-08-01,2,0,2
+West Papua,2022-09-01,2,0,9
+West Papua,2022-10-01,9,1,3
+West Papua,2022-11-01,3,2,4
+West Papua,2022-12-01,4,0,0
+West Papua,2023-01-01,0,0,3
+West Papua,2023-02-01,3,0,5
+West Papua,2023-03-01,5,0,2
+West Papua,2023-04-01,2,0,2
+West Papua,2023-05-01,2,0,2
+West Papua,2023-06-01,2,0,2
+West Papua,2023-07-01,2,0,3
+West Papua,2023-08-01,3,0,4
+West Papua,2023-09-01,4,0,5
+West Papua,2023-10-01,5,0,4
+West Papua,2023-11-01,4,0,3
+West Papua,2023-12-01,3,0,1
+West Papua,2024-01-01,1,0,3
+West Papua,2024-02-01,3,0,4
+West Papua,2024-03-01,4,0,1
+West Papua,2024-04-01,1,0,1
+West Papua,2024-05-01,1,0,2
+West Papua,2024-06-01,2,0,7
+West Papua,2024-07-01,7,0,4
+West Papua,2024-08-01,4,0,4
+West Papua,2024-09-01,4,0,3
+West Papua,2024-10-01,3,0,3
+West Papua,2024-11-01,3,1,5
+West Papua,2024-12-01,5,0,2
+West Papua,2025-01-01,2,0,NA
+West Sulawesi,2019-01-01,1,0,1
+West Sulawesi,2019-02-01,1,0,0
+West Sulawesi,2019-03-01,0,0,1
+West Sulawesi,2019-04-01,1,0,1
+West Sulawesi,2019-05-01,1,0,2
+West Sulawesi,2019-06-01,2,0,1
+West Sulawesi,2019-07-01,1,0,2
+West Sulawesi,2019-08-01,2,0,6
+West Sulawesi,2019-09-01,6,0,4
+West Sulawesi,2019-10-01,4,0,0
+West Sulawesi,2019-11-01,0,0,0
+West Sulawesi,2019-12-01,0,0,0
+West Sulawesi,2020-01-01,0,0,4
+West Sulawesi,2020-02-01,4,0,4
+West Sulawesi,2020-03-01,4,1,0
+West Sulawesi,2020-04-01,0,0,1
+West Sulawesi,2020-05-01,1,0,3
+West Sulawesi,2020-06-01,3,0,5
+West Sulawesi,2020-07-01,5,1,8
+West Sulawesi,2020-08-01,8,2,2
+West Sulawesi,2020-09-01,2,0,5
+West Sulawesi,2020-10-01,5,0,2
+West Sulawesi,2020-11-01,2,0,1
+West Sulawesi,2020-12-01,1,0,1
+West Sulawesi,2021-01-01,1,0,1
+West Sulawesi,2021-02-01,1,0,2
+West Sulawesi,2021-03-01,2,0,1
+West Sulawesi,2021-04-01,1,0,3
+West Sulawesi,2021-05-01,3,0,0
+West Sulawesi,2021-06-01,0,0,0
+West Sulawesi,2021-07-01,0,0,1
+West Sulawesi,2021-08-01,1,0,4
+West Sulawesi,2021-09-01,4,0,6
+West Sulawesi,2021-10-01,6,0,3
+West Sulawesi,2021-11-01,3,0,6
+West Sulawesi,2021-12-01,6,0,4
+West Sulawesi,2022-01-01,4,0,7
+West Sulawesi,2022-02-01,7,0,9
+West Sulawesi,2022-03-01,9,0,2
+West Sulawesi,2022-04-01,2,0,7
+West Sulawesi,2022-05-01,7,0,11
+West Sulawesi,2022-06-01,11,1,3
+West Sulawesi,2022-07-01,3,0,9
+West Sulawesi,2022-08-01,9,0,21
+West Sulawesi,2022-09-01,21,0,3
+West Sulawesi,2022-10-01,3,0,2
+West Sulawesi,2022-11-01,2,0,6
+West Sulawesi,2022-12-01,6,0,4
+West Sulawesi,2023-01-01,4,0,2
+West Sulawesi,2023-02-01,2,0,12
+West Sulawesi,2023-03-01,12,1,3
+West Sulawesi,2023-04-01,3,0,8
+West Sulawesi,2023-05-01,8,0,5
+West Sulawesi,2023-06-01,5,0,4
+West Sulawesi,2023-07-01,4,0,7
+West Sulawesi,2023-08-01,7,0,3
+West Sulawesi,2023-09-01,3,0,7
+West Sulawesi,2023-10-01,7,0,3
+West Sulawesi,2023-11-01,3,0,5
+West Sulawesi,2023-12-01,5,0,9
+West Sulawesi,2024-01-01,9,0,6
+West Sulawesi,2024-02-01,6,0,3
+West Sulawesi,2024-03-01,3,0,4
+West Sulawesi,2024-04-01,4,0,4
+West Sulawesi,2024-05-01,4,0,5
+West Sulawesi,2024-06-01,5,0,7
+West Sulawesi,2024-07-01,7,0,4
+West Sulawesi,2024-08-01,4,0,13
+West Sulawesi,2024-09-01,13,0,12
+West Sulawesi,2024-10-01,12,0,8
+West Sulawesi,2024-11-01,8,1,5
+West Sulawesi,2024-12-01,5,0,8
+West Sulawesi,2025-01-01,8,0,NA
+West Sumatra,2019-01-01,1,0,1
+West Sumatra,2019-02-01,1,0,2
+West Sumatra,2019-03-01,2,0,1
+West Sumatra,2019-04-01,1,0,1
+West Sumatra,2019-05-01,1,0,0
+West Sumatra,2019-06-01,0,0,1
+West Sumatra,2019-07-01,1,0,0
+West Sumatra,2019-08-01,0,0,4
+West Sumatra,2019-09-01,4,0,1
+West Sumatra,2019-10-01,1,0,0
+West Sumatra,2019-11-01,0,0,1
+West Sumatra,2019-12-01,1,0,3
+West Sumatra,2020-01-01,3,0,0
+West Sumatra,2020-02-01,0,0,1
+West Sumatra,2020-03-01,1,0,0
+West Sumatra,2020-04-01,0,0,2
+West Sumatra,2020-05-01,2,0,0
+West Sumatra,2020-06-01,0,0,7
+West Sumatra,2020-07-01,7,0,0
+West Sumatra,2020-08-01,0,0,0
+West Sumatra,2020-09-01,0,0,2
+West Sumatra,2020-10-01,2,0,0
+West Sumatra,2020-11-01,0,0,0
+West Sumatra,2020-12-01,0,0,0
+West Sumatra,2021-01-01,0,0,1
+West Sumatra,2021-02-01,1,0,7
+West Sumatra,2021-03-01,7,0,2
+West Sumatra,2021-04-01,2,0,0
+West Sumatra,2021-05-01,0,0,0
+West Sumatra,2021-06-01,0,0,3
+West Sumatra,2021-07-01,3,0,2
+West Sumatra,2021-08-01,2,0,5
+West Sumatra,2021-09-01,5,0,0
+West Sumatra,2021-10-01,0,0,0
+West Sumatra,2021-11-01,0,0,1
+West Sumatra,2021-12-01,1,0,6
+West Sumatra,2022-01-01,6,0,4
+West Sumatra,2022-02-01,4,0,5
+West Sumatra,2022-03-01,5,0,3
+West Sumatra,2022-04-01,3,0,4
+West Sumatra,2022-05-01,4,0,1
+West Sumatra,2022-06-01,1,0,1
+West Sumatra,2022-07-01,1,0,3
+West Sumatra,2022-08-01,3,0,11
+West Sumatra,2022-09-01,11,0,2
+West Sumatra,2022-10-01,2,0,1
+West Sumatra,2022-11-01,1,0,3
+West Sumatra,2022-12-01,3,0,2
+West Sumatra,2023-01-01,2,0,3
+West Sumatra,2023-02-01,3,0,2
+West Sumatra,2023-03-01,2,0,3
+West Sumatra,2023-04-01,3,0,10
+West Sumatra,2023-05-01,10,1,4
+West Sumatra,2023-06-01,4,0,5
+West Sumatra,2023-07-01,5,0,9
+West Sumatra,2023-08-01,9,1,2
+West Sumatra,2023-09-01,2,0,5
+West Sumatra,2023-10-01,5,0,5
+West Sumatra,2023-11-01,5,0,3
+West Sumatra,2023-12-01,3,0,2
+West Sumatra,2024-01-01,2,0,7
+West Sumatra,2024-02-01,7,0,1
+West Sumatra,2024-03-01,1,0,2
+West Sumatra,2024-04-01,2,0,1
+West Sumatra,2024-05-01,1,0,6
+West Sumatra,2024-06-01,6,0,7
+West Sumatra,2024-07-01,7,0,10
+West Sumatra,2024-08-01,10,0,4
+West Sumatra,2024-09-01,4,0,4
+West Sumatra,2024-10-01,4,2,5
+West Sumatra,2024-11-01,5,0,3
+West Sumatra,2024-12-01,3,0,2
+West Sumatra,2025-01-01,2,0,NA
+Yogyakarta,2019-01-01,1,0,1
+Yogyakarta,2019-02-01,1,0,1
+Yogyakarta,2019-03-01,1,0,0
+Yogyakarta,2019-04-01,0,0,1
+Yogyakarta,2019-05-01,1,1,2
+Yogyakarta,2019-06-01,2,0,1
+Yogyakarta,2019-07-01,1,0,5
+Yogyakarta,2019-08-01,5,0,4
+Yogyakarta,2019-09-01,4,0,0
+Yogyakarta,2019-10-01,0,0,1
+Yogyakarta,2019-11-01,1,0,2
+Yogyakarta,2019-12-01,2,0,0
+Yogyakarta,2020-01-01,0,0,1
+Yogyakarta,2020-02-01,1,0,2
+Yogyakarta,2020-03-01,2,0,0
+Yogyakarta,2020-04-01,0,0,1
+Yogyakarta,2020-05-01,1,0,3
+Yogyakarta,2020-06-01,3,0,3
+Yogyakarta,2020-07-01,3,0,2
+Yogyakarta,2020-08-01,2,0,0
+Yogyakarta,2020-09-01,0,0,5
+Yogyakarta,2020-10-01,5,0,2
+Yogyakarta,2020-11-01,2,0,4
+Yogyakarta,2020-12-01,4,0,2
+Yogyakarta,2021-01-01,2,0,2
+Yogyakarta,2021-02-01,2,0,2
+Yogyakarta,2021-03-01,2,1,1
+Yogyakarta,2021-04-01,1,0,5
+Yogyakarta,2021-05-01,5,0,3
+Yogyakarta,2021-06-01,3,0,3
+Yogyakarta,2021-07-01,3,1,3
+Yogyakarta,2021-08-01,3,0,4
+Yogyakarta,2021-09-01,4,0,2
+Yogyakarta,2021-10-01,2,0,2
+Yogyakarta,2021-11-01,2,0,4
+Yogyakarta,2021-12-01,4,0,4
+Yogyakarta,2022-01-01,4,0,4
+Yogyakarta,2022-02-01,4,0,5
+Yogyakarta,2022-03-01,5,0,5
+Yogyakarta,2022-04-01,5,0,2
+Yogyakarta,2022-05-01,2,0,4
+Yogyakarta,2022-06-01,4,0,3
+Yogyakarta,2022-07-01,3,0,5
+Yogyakarta,2022-08-01,5,0,8
+Yogyakarta,2022-09-01,8,0,3
+Yogyakarta,2022-10-01,3,0,2
+Yogyakarta,2022-11-01,2,0,0
+Yogyakarta,2022-12-01,0,0,2
+Yogyakarta,2023-01-01,2,0,2
+Yogyakarta,2023-02-01,2,0,2
+Yogyakarta,2023-03-01,2,0,1
+Yogyakarta,2023-04-01,1,0,2
+Yogyakarta,2023-05-01,2,0,4
+Yogyakarta,2023-06-01,4,0,1
+Yogyakarta,2023-07-01,1,0,3
+Yogyakarta,2023-08-01,3,0,6
+Yogyakarta,2023-09-01,6,0,8
+Yogyakarta,2023-10-01,8,0,9
+Yogyakarta,2023-11-01,9,0,7
+Yogyakarta,2023-12-01,7,0,8
+Yogyakarta,2024-01-01,8,0,13
+Yogyakarta,2024-02-01,13,0,11
+Yogyakarta,2024-03-01,11,0,6
+Yogyakarta,2024-04-01,6,0,12
+Yogyakarta,2024-05-01,12,1,7
+Yogyakarta,2024-06-01,7,0,7
+Yogyakarta,2024-07-01,7,0,8
+Yogyakarta,2024-08-01,8,1,8
+Yogyakarta,2024-09-01,8,0,11
+Yogyakarta,2024-10-01,11,0,9
+Yogyakarta,2024-11-01,9,0,11
+Yogyakarta,2024-12-01,11,0,5
+Yogyakarta,2025-01-01,5,0,NA
