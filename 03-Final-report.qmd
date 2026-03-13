@@ -1,0 +1,927 @@
+---
+title: "Heterogeneous Effects of State Repression on Social Movement Mobilization"
+subtitle: "MACS 30100 — Final Project"
+author: "An Nisa Astuti"
+date: today
+format: 
+  pdf:
+    toc: true
+    number-sections: true
+    keep-tex: true
+    latex-engine: xelatex
+    geometry: margin=1in
+    fontsize: 11pt
+    linestretch: 1.5
+execute:
+  echo: true
+  warning: false
+  message: false
+bibliography: references.bib
+---
+
+```{r setup}
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(glmnet)
+library(ranger)
+library(xgboost)
+library(vdemdata)
+library(pdp)
+library(SHAPforxgboost)
+
+theme_set(theme_minimal(base_size = 12))
+```
+
+**GitHub repository:** <https://github.com/asttanns/indonesia-repression-mobilization>
+
+# Introduction
+
+## Research Question
+
+Under what conditions does state repression reshape the trajectory of contentious politics, and what do these heterogeneous effects reveal about movement durability under varying regime constraints? This project reframes the question from whether repression "works" on average to *when* and *how* repression changes trajectories of contention. Specifically, I ask:
+
+1.  **Mobilization (short-run):** How does repression intensity in period $t$ affect protest activity in period $t+1$?
+2.  **Durability:** How does repression affect the speed at which areas enter quiescence?
+3.  **Heterogeneity:** How do regime characteristics and baseline movement capacity moderate these effects?
+
+This is a supervised regression task: predicting next-week protest counts as a continuous outcome from repression and contextual features.
+
+## Significance
+
+Understanding when repression backfires versus when it succeeds has direct policy implications. If lethal force consistently triggers backlash while routine intervention deters, then the presence and form of state response determines whether contention escalates or subsides. This prediction matters for human rights policy advocacy, especially to forecast political instability and understand how authoritarian regimes manage dissent without provoking the crises they seek to prevent.
+
+## Data and Analytical Context
+
+I use an admin1–week panel constructed from ACLED event data for Indonesia (2019–2025), merged with V-Dem country-year regime indicators. The unit of analysis is an admin1 (province)-week per row of data.
+
+Since the proposal, several features of the data have reshaped the analytic approach. First, the panel is fundamentally **non-independent and identically distributed (non-IID)**: observations within the same province are correlated over time (protests this week predict protests next week), and observations within the same week are correlated across provinces (national-level shocks like the Omnibus Law on Job Creation-related protests affect all provinces simultaneously). This violates the independence assumption underlying standard regression, which motivates the use of lagged features and time-based train/test splits rather than random cross-validation. This project proceeds with standard supervised learning methods (lasso, random forest, XGBoost) despite the non-IID structure. The time-based train/test split and lagged features partially mitigate temporal dependence, but cross-provincial correlation within the same week remains unaddressed.
+
+Second, the V-Dem merge operates as **temporal context rather than a direct moderator**. Because Indonesia is a single country, V-Dem indicators do not vary across provinces, which all 34 provinces in a given year have the same democracy score. This means V-Dem captures year-to-year shifts in Indonesia's political environment (e.g., declining civic space during Joko Widodo's second presidential term) rather than cross-sectional differences between more and less democratic contexts. Future work incorporating subnational SES indicators from national surveys (Susenas, Sakernas) would provide the admin1-level variation needed for richer heterogeneity analysis.
+
+Third, the current analysis focuses on a **short-run prediction task** (next-week protest count), but the research questions also demand a process-oriented measure of durability. The extension of this project would reframe the outcome as a discrete-time hazard: **for each province-week currently experiencing contention, what is the probability of entering quiescence (defined as K consecutive weeks with zero protests)?** The current predictive models lay the groundwork for this extension by identifying which features matter most for next-week mobilization, informing which covariates should enter the time-hazard model.
+
+# Literature Review
+
+The repression–mobilization literature finds that repression can both suppress and stimulate dissent, with the direction depending on timing, form, and context [@davenport2007]. Repression is multi-modal, from harassment to mass killing, and empirical findings are contingent rather than uniform. Social movement scholars emphasize that contradictory findings reflect variation in targets, tactics, and downstream effects such as backlash, deterrence, and abeyance [@earl2011; @taylor1989].
+
+Rather than treating outcomes as a static binary (backlash vs. deterrence), a durability lens treats contention as a process: how long protest episodes continue or how quickly they enter quiescence? This approach allows repression to shorten, prolong, or reconfigure contention rather than simply switching protest "on" or "off." Recent event-data work provides a concrete template for this move by constructing protest episodes as temporally linked demonstrations within an administrative unit [@lewis2025].
+
+Methodologically, I follow the causal forests framework of @athey2019 for estimating conditional average treatment effects (CATEs) as a planned extension beyond this paper. @yin2023 demonstrate this approach in analyzing heterogeneous voter responses to police tear gas in Hong Kong, finding that economic insecurity moderated the effect of state coercion. @siddiqui2025 use XGBoost and two-way fixed effects to analyze the 2024 Bangladesh revolution, identifying "excessive force against protesters" as the dominant predictor of nationwide escalation. The finding parallels the predictive baseline approach adopted here, where I use lasso, random forest, and XGBoost as predictive baselines to identify which features matter most before moving to causal estimation in future work.
+
+# Data and Measurement
+
+## Data Sources
+
+**ACLED (Armed Conflict Location & Event Data Project).** Event-level, geocoded conflict data covering Indonesia from 2019 to 2025. Data was accessed via the ACLED API and downloaded as CSV. Key variables include event type, sub-event type, actors, fatalities, admin1/admin2 location, and date.
+
+**V-Dem (Varieties of Democracy, v15).** Country-year indicators for regime type, democracy indices, civil society repression, freedom of expression, and government censorship. Accessed via the `vdemdata` R package.
+
+## Panel Construction
+
+The unit of analysis is **admin1–week**. I construct a balanced panel of all Indonesian provinces × weeks in the study period. For each cell I compute:
+
+-   **Protest count** (outcome): number of protest events in admin1-week
+-   **Repression events** (treatment): count of "Protest with intervention" and "Excessive force against protesters" sub-events
+-   **Repression fatalities**: fatalities in repression events
+
+Missing cells (admin1-weeks with no recorded events) are filled with zeros to create a balanced panel. This zero-fill is substantively appropriate: a province-week with no recorded events means no events occurred, not that data is missing.
+
+```{r load data}
+
+acled_path <- file.path("..", "data_raw", "acled_idn_2019_2025.csv")
+acled <- read_csv(acled_path, show_col_types = FALSE) |> clean_names()
+
+# parse to week
+acled <- acled |>
+  mutate(
+    event_date = as.Date(event_date),
+    year = year(event_date),
+    month = floor_date(event_date, "month"),
+    week = floor_date(event_date, "week")
+  ) |>
+  filter(!is.na(admin1), admin1 != "")
+```
+
+```{r build-panel}
+
+# protest counts per admin1-week 
+panel_protest <- acled |>
+  filter(event_type == "Protests") |>
+  count(admin1, week, name = "protest_count")
+
+# repression counts per admin1-week 
+repress_subtypes <- c("Protest with intervention",
+                       "Excessive force against protesters")
+
+panel_repress <- acled |>
+  filter(event_type == "Protests",
+         sub_event_type %in% repress_subtypes) |>
+  group_by(admin1, week) |>
+  summarise(
+    repression_events     = n(),
+    repression_fatalities = sum(fatalities, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# violence against civilians (alternative treatment) 
+panel_vac <- acled |>
+  filter(event_type == "Violence against civilians") |>
+  count(admin1, week, name = "vac_count")
+
+# riots 
+panel_riots <- acled |>
+  filter(event_type == "Riots") |>
+  count(admin1, week, name = "riot_count")
+
+# balance the panel 
+admin1_list <- acled |> distinct(admin1)
+week_seq <- tibble(week = seq.Date(
+  from = min(acled$week), to = max(acled$week), by = "week"
+))
+
+panel <- admin1_list |>
+  crossing(week_seq) |>
+  left_join(panel_protest,  by = c("admin1", "week")) |>
+  left_join(panel_repress,  by = c("admin1", "week")) |>
+  left_join(panel_vac,      by = c("admin1", "week")) |>
+  left_join(panel_riots,    by = c("admin1", "week")) |>
+  mutate(across(c(protest_count, repression_events,
+                  repression_fatalities, vac_count, riot_count),
+                \(x) replace_na(x, 0L))) |>
+  arrange(admin1, week)
+```
+
+## Feature Engineering
+
+```{r feature-engineering}
+panel <- panel |>
+  group_by(admin1) |>
+  mutate(
+    # outcome: next-period protest 
+    protest_t1 = lead(protest_count, 1),
+
+    # treatment at time t 
+    repression_t = repression_events,
+
+    # lags
+    protest_lag1 = lag(protest_count, 1),
+    protest_lag2 = lag(protest_count, 2),
+    repress_lag1 = lag(repression_events, 1),
+
+    # rolling windows (past 4 weeks) 
+    protest_roll4  = zoo::rollmeanr(protest_count, k = 4, fill = NA),
+    repress_roll4  = zoo::rollmeanr(repression_events, k = 4, fill = NA),
+
+    # binary treatment (any repression) 
+    repression_binary = as.integer(repression_events > 0),
+
+    # cumulative repression (within year, proxy for regime intensity)
+    year = year(week),
+    cum_repress_year = cumsum(repression_events),
+
+    # time features
+    week_of_year = isoweek(week),
+    month_num    = month(week)
+  ) |>
+  ungroup()
+
+# alternative treatment: broader repression (includes violence against civilians) ──
+panel <- panel |>
+  mutate(
+    repression_broad = repression_events + vac_count,
+    repression_broad_binary = as.integer(repression_broad > 0)
+  )
+
+```
+
+```{r regime-indicators}
+vdem_idn <- vdem |>
+  filter(country_name == "Indonesia") |>
+  select(
+    year,
+    v2x_polyarchy,      # electoral democracy index
+    v2x_libdem,         # liberal democracy index
+    v2x_regime,         # regime type (4 categories)
+    v2csreprss,         # CSO repression
+    v2x_freexp_altinf,  # freedom of expression
+    v2mecenefm          # government censorship
+  )
+
+panel <- panel |>
+  mutate(year = year(week)) |>
+  left_join(vdem_idn, by = "year")
+
+dim(panel)
+```
+
+I engineer features at the admin1-week level to capture three theoretically motivated dimensions of the repression–mobilization relationship. First, temporal dynamics: lagged protest and repression counts (1-week, 2-week) and 4-week rolling averages control for autocorrelation and proxy sustained movement capacity and repressive pressure. Second, treatment intensity: repression is measured both as a count and as a binary indicator, with cumulative within-year repression capturing longer-term exposure. Third, contextual moderation: V-Dem country-year indicators are merged by year to track shifts in Indonesia's democratic quality over the study period, while time features (week-of-year, month) capture seasonal rhythms in Indonesian contention. Together, these features allow the models to distinguish whether next-week protest activity is driven by immediate repressive shocks, underlying mobilization momentum, or broader regime-level conditions.
+
+**Outcome variable.** `protest_t1` is the protest count in the next week for the same province. This forward shift operationalizes the core research question: does repression at time *t* predict mobilization at *t+1*?
+
+**Treatment variable.** `repression_t` captures the count of repressive sub-events (protest with intervention, excessive force against protesters) in a given admin1-week. `repression_binary` recodes this as a simple indicator of whether any repression occurred, which serves as an alternative treatment definition for robustness.
+
+**Alternative treatment.** Given that repressive sub-events constitute only 3.9% of all protest events, I construct a broader repression measure. `repression_broad` combines protest-linked repression with violence against civilians (`vac_count`) in the same province-week, capturing a wider range of state coercive behavior beyond what happens strictly at protest sites. `repression_broad_binary` recodes this as a 0/1 indicator. This is also for robustness check: if the results hold under both the narrow definition (intervention at protests only) and the broader definition (any state violence), the findings have more validity.
+
+**Lagged features.** `protest_lag1` and `protest_lag2` (1-week and 2-week lagged protest counts) control for temporal autocorrelation. Provinces with high protest activity tend to remain active in subsequent weeks regardless of repression. `repress_lag1` captures whether repression itself is serially correlated, addressing the possibility that repressive episodes cluster in time.
+
+**Rolling means.** `protest_roll4` and `repress_roll4` compute 4-week trailing averages of protest and repression activity within each province. These serve as proxies for movement capacity and repressive environment: a province with a high rolling mean of protests has an active mobilization base, while a high rolling repression mean signals sustained state pressure. These are the closest available approximation to the "baseline movement capacity" moderator specified in the research design.
+
+**Cumulative repression.** `cum_repress_year` sums repression events within each province-year. This assesses whether repression accumulated over the year, rather than only in the immediate week, influences subsequent protest trajectories.
+
+**Time features.** `week_of_year` and `month_num` capture seasonal patterns in Indonesian contention, such as heightened protest activity around May Day, budget deliberation periods, or the anniversary of Reformasi.
+
+**V-Dem regime indicators.** Since Indonesia is a single country, V-Dem variables are merged at the year level, it means all provinces in a given year receive the same score. These capture *over-time* variation in democratic quality (e.g., shifts in civil society space or press freedom across the Joko Widodo administration), rather than cross-country variation. The six indicators span electoral democracy (`v2x_polyarchy`), liberal democracy (`v2x_libdem`), regime classification (`v2x_regime`), civil society organization repression (`v2csreprss`), freedom of expression (`v2x_freexp_altinf`), and government censorship (`v2mecenefm`).
+
+# Exploratory Data Analysis
+
+## Coverage and Missing Data
+
+```{r eda-coverage}
+# summary
+acled |>
+  summarise(
+    n_events   = n(),
+    n_admin1   = n_distinct(admin1),
+    date_range = paste(min(event_date), "to", max(event_date)),
+    n_years    = n_distinct(year)
+  )
+
+# events per year
+acled |>
+  count(year, event_type) |>
+  ggplot(aes(year, n, fill = event_type)) +
+  geom_col(position = "dodge") +
+  labs(title = "ACLED Indonesia: Events by Type and Year",
+       x = NULL, y = "Event count", fill = "Event type") +
+  scale_fill_brewer(palette = "Set2")
+```
+
+```{r eda-admin1-coverage}
+# events per admin1 
+acled |>
+  filter(event_type == "Protests") |>
+  count(admin1, sort = TRUE) |>
+  slice_head(n = 20) |>
+  mutate(admin1 = fct_reorder(admin1, n)) |>
+  ggplot(aes(n, admin1)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "Top 20 Provinces by Protest Event Count",
+       x = "Number of protest events", y = NULL)
+
+```
+
+## Outcome Distribution
+
+Most province-weeks have zero protests, a smaller number have 1–2, and a handful spike to 10 or 20+. The data piles up at zero and right-skewed, a common pattern for event counts. The log-transformed version spreads this out, making variation among non-zero values easier to see. This matters for modeling since standard linear regression assumes roughly bell-shaped outcomes, but protest counts can never go below zero and are mostly zero.
+
+```{r}
+# protest count distribution
+panel |>
+  ggplot(aes(protest_count)) +
+  geom_histogram(bins = 30, fill = "steelblue", color = "white") +
+  labs(title = "Distribution of Weekly Protest Counts (admin1-week)",
+       x = "Protest count", y = "Frequency")
+
+# log+1 transform
+panel |>
+  ggplot(aes(log1p(protest_count))) +
+  geom_histogram(bins = 30, fill = "coral", color = "white") +
+  labs(title = "Log(1 + protest count)",
+       x = "log(1 + count)", y = "Frequency")
+
+```
+
+## Treatment Audit
+
+```{r eda-treatment}
+acled |>
+  filter(event_type == "Protests") |>
+  count(sub_event_type, sort = TRUE) |>
+  mutate(pct = round(n / sum(n) * 100, 1)) 
+```
+
+The audit reveals that repressive sub-events are rare: "Protest with intervention" accounts for 3.8% of all protests and "Excessive force against protesters" only 0.1%. This means the overwhelming majority of protests in Indonesia proceed peacefully without state interference. The sparsity of the treatment variable reflects the reality that repression is selective rather than routine, which is consistent with the literature on targeted repression under electoral autocracies. However, it also means the models have limited repression variation to learn from, so effect estimates should be interpreted cautiously. To address this, I have constructed a broader repression measure by adding alternative treatment through `repression_broad` combines protest-linked repression with violence against civilians (`vac_count`) in the same province-week, capturing a wider range of state coercive behavior beyond what happens strictly at protest sites. `repression_broad_binary` recodes this as a 0/1 indicator. The alternative treatment also serves as a robustness check, allowing me to assess whether the results hold under both a narrow definition (intervention at protests only) and a broader definition (any state violence).
+
+```{r eda-treatment-time}
+# national time series: protests vs repression 
+panel |>
+  group_by(week) |>
+  summarise(
+    Protests   = sum(protest_count),
+    Repression = sum(repression_events),
+    .groups = "drop"
+  ) |>
+  pivot_longer(-week, names_to = "series", values_to = "count") |>
+  ggplot(aes(week, count, color = series)) +
+  geom_line(alpha = 0.7) +
+  facet_wrap(~series, scales = "free_y", ncol = 1) +
+  labs(title = "National Weekly Protest and Repression Counts (Indonesia)",
+       x = NULL, y = "Count") +
+  theme(legend.position = "none") +
+  scale_color_manual(values = c("steelblue", "firebrick"))
+```
+
+The national weekly series shows pronounced volatility in protest activity, including several clustered spikes in 2019–2020, a major outlier in 2022, and repeated elevated peaks in 2023–2024. Weekly repression counts are lower and more episodic, with bursts concentrated in specific periods rather than moving one-for-one with protest volume. Visually, several protest spikes plausibly correspond to known national protest cycles in Indonesia, including the 2019 student protests, the 2020 Omnibus Law protests, and election-related mobilization in 2024, but exact alignment requires validation using week-level ACLED event notes and dates around the spikes.
+
+## Descriptive Statistics
+
+```{r descriptive-stats}
+
+# summary table for key variables
+panel |>
+  select(protest_count, repression_events, repression_fatalities,
+         vac_count, riot_count) |>
+  pivot_longer(everything()) |>
+  group_by(name) |>
+  summarise(
+    Mean   = round(mean(value, na.rm = TRUE), 3),
+    SD     = round(sd(value, na.rm = TRUE), 3),
+    Median = median(value, na.rm = TRUE),
+    Max    = max(value, na.rm = TRUE),
+    `% Zero` = round(mean(value == 0, na.rm = TRUE) * 100, 1),
+    .groups = "drop"
+  ) 
+```
+
+```{r correlation-matrix}
+# select numeric features for correlation 
+cor_vars <- panel |>
+  select(protest_count, protest_t1, repression_events,
+         repression_binary, repression_broad,
+         vac_count, riot_count,
+         protest_lag1, protest_lag2, repress_lag1,
+         protest_roll4, repress_roll4,
+         cum_repress_year, week_of_year) |>
+  drop_na()
+
+# remove columns with zero variance
+cor_vars <- cor_vars |>
+  select(where(\(x) sd(x) > 0))
+
+cor_mat <- cor(cor_vars)
+
+cor_mat |>
+  as.data.frame() |>
+  rownames_to_column("var1") |>
+  pivot_longer(-var1, names_to = "var2", values_to = "cor") |>
+  ggplot(aes(var1, var2, fill = cor)) +
+  geom_tile() +
+  geom_text(aes(label = round(cor, 2)), size = 2, na.rm = TRUE) +
+  scale_fill_gradient2(low = "steelblue", high = "red", mid = "white") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "Correlation Matrix", x = NULL, y = NULL)
+
+```
+
+Here V-Dem indicators are excluded from the correlation matrix because they vary only at the country-year level, producing near-zero variance across the weekly panel.
+
+The features most strongly correlated with the outcome `protest_t1` are the protest history variables: `protest_roll4` (0.65), `protest_lag1` (0.58), `protest_count` (0.57), and `protest_lag2` (0.53). This confirms that past protest activity is the strongest signal for predicting next-week mobilization. When contention is persistent, and provinces that are active tend to stay active. By contrast, the repression variables show weak direct correlation with the outcome: `repression_events` and `repression_broad` both correlate with `protest_t1` at only 0.12, and `repression_binary` at 0.07. This does not mean repression is irrelevant, it may still matter conditionally or in interaction with other features, however, it will not dominate the models on its own.
+
+There are two multicollinearity concerns. First, the repression family (`repression_events`, `repression_binary`, `repression_broad`) are near-perfectly correlated (0.93–1.0). Including all three would be redundant, so I use `repression_events` as the main treatment and reserve the others for robustness checks. Second, the protest lags and rolling mean are highly intercorrelated (0.58–0.83), which is expected since they all derive from the same underlying series. Lasso will select among correlated predictors and shrinking the rest toward zero. Random forest is less affected by multicollinearity since it selects features independently at each split.
+
+## Hierarchical Clustering of Features
+
+```{r clustering}
+
+# distance matrix from correlations
+dist_mat <- as.dist(1 - abs(cor_mat))
+hc <- hclust(dist_mat, method = "complete")
+plot(hc, main = "Hierarchical Clustering of Features (1 - |correlation|)",
+     xlab = "", sub = "")
+
+```
+
+The dendrogram confirms and extends these patterns by showing the overall clustering structure. The repression family and protest momentum cluster appear as tight groups merging at near-zero height. Beyond what the heatmap shows, the dendrogram reveals two additional patterns. First, `repress_lag1` and `repress_roll4` form their own pair, separate from both current-week repression and protest momentum. It shows that repression history behaves statistically differently from current-week repression, suggesting that sustained repressive pressure and immediate crackdowns carry distinct signals. Second, `cum_repress_year`, `week_of_year`, and `riot_count` each join the tree at high distances, confirming they bring unique information that no other feature provides. Seasonality (`week_of_year)` is the most independent feature in the panel. It means that `week_of_year` captures genuinely distinct variation, when contention peaks seasonally (May Day, Reformasi anniversary, election cycles), that the protest and repression clusters cannot supply. This clustering structure informs the next modeling strategy that features within the same tight cluster are interchangeable (let the lasso choose among them), while the independent feature like `week_of_year)` can be used to minimize redundancy.
+
+## Bivariate Relationship
+
+```{r bivariate}
+panel |>
+  filter(!is.na(protest_t1)) |>
+  ggplot(aes(repression_events, protest_t1)) +
+  geom_jitter(alpha = 0.1, width = 0.2, height = 0.2, size = 0.5) +
+  geom_smooth(method = "lm", color = "firebrick") +
+  labs(title = "Repression at t vs. Protest Count at t+1",
+       x = "Repression events (week t)",
+       y = "Protest count (week t+1)")
+```
+
+The bivariate plot shows a weak positive association between repression at week *t* and protest count at week *t+1*. However, this relationship is heavily confounded since provinces that experience repression are the same provinces that already have high protest activity. Without controlling for lagged protests (which the models will do), this positive slope likely reflects protest momentum rather than a causal repression effect.
+
+## Top Provinces: Time Series
+
+```{r}
+top10 <- panel |>
+  group_by(admin1) |>
+  summarise(total = sum(protest_count)) |>
+  slice_max(total, n = 6) |>
+  pull(admin1)
+
+panel |>
+  filter(admin1 %in% top10) |>
+  ggplot(aes(week, protest_count)) +
+  geom_line(color = "steelblue", alpha = 0.7) +
+  geom_line(aes(y = repression_events), color = "firebrick", alpha = 0.7) +
+  facet_wrap(~admin1, scales = "free_y") +
+  labs(title = "Weekly Protests (blue) and Repression (red) in Top 6 Provinces",
+       x = NULL, y = "Count")
+```
+
+The faceted time series shows protest activity (blue) and repression (red) for the six most active provinces. Several patterns stand out:
+
+First, protest activity is volatile and spiky across all six provinces. Jakarta, East Java, and West Java show the highest peaks (reaching 15–35 events per week), with sharp spikes followed by rapid drops. This confirms why the models struggle to predict extreme weeks, because they are sudden, short-lived, and not following a smooth trend.
+
+Second, repression (red) is barely visible in most province-weeks. It hugs the zero line with only occasional small blips. This is echoing the treatment sparsity from the audit (3.9%), showing that repression is rare even in the most active provinces. Jakarta shows the most visible red spikes, concentrated around 2019–2020 and 2024, it is plausibly corresponding to the student protests and election-related mobilization where police intervention was more frequent.
+
+Third, repression does not move one-for-one with protest. Some large protest spikes have no repression at all (the state chose not to intervene), while some moderate protest weeks show repression spikes (the state chose to crack down on smaller events). This visual disconnect supports the modeling finding that the raw correlation between repression and next-week protest is weak (0.12), the state's decision to repress is selective and context-dependent, not mechanically tied to protest volume.
+
+Fourth, the provinces show different temporal profiles. Central Java and North Sumatra have relatively steady low-level activity with occasional spikes. West Java and East Java show increasing volatility toward 2024. Jakarta has the most consistent baseline activity across the full period. These provincial differences are what the admin1-level features (lags, rolling means) are designed to capture. The models learn that "Jakarta at baseline 5 protests/week" is different from "North Sumatra at baseline 2 protests/week."
+
+This plot connects to the bigger story that protest momentum (the blue patterns) dominates the data, which is why `protest_roll4` is the strongest predictor across all models. Repression (the red blips) is a secondary signal layered on top, in which rare, selective, and requiring the models to detect its effect against a noisy backdrop of ongoing contention.
+
+# Modeling
+
+## Analytical Strategy
+
+I predict **protest count at** $t+1$ (next-week protest activity) as a function of repression and contextual features at time $t$. This is a supervised regression task. I fit three models with complementary strengths:
+
+1.  **Lasso regression** (L1-penalized linear model): provides directly interpretable coefficients and automatic feature selection through L1 regularization, making it well-suited for identifying which features predict next-week protest and in what direction.
+2.  **Random forest**: captures nonlinear relationships and feature interactions without requiring manual specification, and its variable importance ranking offers a model-agnostic check on which features carry the most predictive power.
+3.  **XGBoost** with a Poisson objective: combines count-aware modeling with gradient boosting's ability to handle sparse features — a relevant advantage given that repression events are non-zero in only 4% of observations. Unlike random forest (which builds trees independently), XGBoost builds trees sequentially, with each tree correcting the errors of the previous one.
+
+Together, the three models form a progression from simple and interpretable (lasso) to flexible and nonparametric (random forest, XGBoost). If findings converge across all three, they are robust to model specification.
+
+All models are evaluated on a time-based 80/20 train/test split, ensuring the model learns from the past and predicts the future. For lasso, lambda is tuned via 5-fold cross-validation with time-ordered folds (`foldid`), so that each fold validates on data later than its training data, so it is consistent with the temporal structure of the panel.
+
+## Prepare Modeling Data
+
+```{r modeling-prep}
+model_df <- panel |>
+  select(admin1, week, protest_t1,
+         repression_events, repression_binary, repression_fatalities,
+         vac_count, riot_count,
+         protest_lag1, protest_lag2, repress_lag1,
+         protest_roll4, repress_roll4,
+         cum_repress_year,
+         week_of_year, month_num,
+         v2x_polyarchy, v2x_libdem, v2csreprss,
+         v2x_freexp_altinf, v2mecenefm) |>
+  drop_na()
+
+cat("Full panel:", nrow(panel), "rows\n")
+cat("After drop_na:", nrow(model_df), "rows\n")
+cat("Rows dropped:", nrow(panel) - nrow(model_df), 
+    "(", round((nrow(panel) - nrow(model_df)) / nrow(panel) * 100, 1), "%)\n")
+
+```
+
+The `drop_na()` step removes rows where lagged or rolling features could not be computed. Specifically, the first 4 weeks of each province's time series (where 1-week, 2-week lags and 4-week rolling means have no prior data) and the final week (where the lead outcome `protest_t1` is undefined). These values are undefined by construction, not missing due to non-response or measurement failure. However, no observations with valid feature values are dropped.
+
+```{r train-test-split}
+# time-based train/test split (80/20)
+cutoff_date <- sort(unique(model_df$week))[round(0.8 * n_distinct(model_df$week))]
+
+train <- model_df |> filter(week < cutoff_date)
+test  <- model_df |> filter(week >= cutoff_date)
+
+cat("Train:", nrow(train), "rows | Test:", nrow(test), "rows\n")
+cat("Train period:", as.character(min(train$week)), "to", as.character(max(train$week)), "\n")
+cat("Test period: ", as.character(min(test$week)),  "to", as.character(max(test$week)), "\n")
+```
+
+```{r model-matrices}
+features <- setdiff(names(model_df), c("admin1", "week", "protest_t1"))
+
+X_train <- train |> select(all_of(features)) |> as.matrix()
+y_train <- train$protest_t1
+
+X_test  <- test  |> select(all_of(features)) |> as.matrix()
+y_test  <- test$protest_t1
+```
+
+## Model 1: Lasso
+
+```{r lasso-cv}
+set.seed(42)
+
+# time-ordered folds for temporal consistency
+time_folds <- train |>
+  mutate(fold = ntile(week, 5)) |>
+  pull(fold)
+
+lasso_cv <- cv.glmnet(X_train, y_train, alpha = 1, foldid = time_folds)
+
+# best lambda 
+cat("Lambda min:", lasso_cv$lambda.min, "\n")
+cat("Lambda 1se:", lasso_cv$lambda.1se, "\n")
+
+plot(lasso_cv, main = "Lasso: Cross-Validation Curve")
+```
+
+```{r lasso-coefs}
+
+lasso_coefs <- coef(lasso_cv, s = "lambda.min") |>
+  as.matrix() |>
+  as.data.frame() |>
+  rownames_to_column("feature") |>
+  rename(coefficient = 2) |>
+  filter(coefficient != 0, feature != "(Intercept)") |>
+  arrange(desc(abs(coefficient)))
+
+lasso_coefs
+
+```
+
+The lasso retains 13 features. First, `v2x_polyarchy` (electoral democracy index) has the largest coefficient (1.53), meaning years with higher democracy scores are associated with more next-week protest activity, it shows that more democratic years provide more space for mobilization. `v2x_freexp_altinf` (freedom of expression, 1.04) and `v2csreprss` (CSO repression, 0.10) point in the same direction that more open civic space predicts more protest. This is partial evidence for RQ3 by showing that regime context matters.
+
+Second, repression shows a split signal. `repression_fatalities` has a positive coefficient (1.31), in which lethal repression is followed by more protest next week, consistent with a backlash effect. But `repression_events` has a negative coefficient (−0.38), it shows that more frequent (but non-lethal) interventions are followed by less protest, consistent with deterrence. And `repression_binary` is positive (0.44). This suggests that the form of repression matters more than its mere presence: lethal force triggers backlash while routine intervention produces deterrence. This is consistent with the literature, that repression is not a uniform treatment with a single effect, but a multi-modal set of tactics whose consequences depend on type, severity, and context [@davenport2007; @earl2011].
+
+Third, `protest_roll4` (0.70) is the strongest ACLED-derived predictor, confirming that protest momentum is a key driver for the next mobilization, showed by sustained mobilization over the past 4 weeks.
+
+Fourth, `repress_lag1` is negative (−0.17), meaning provinces that were repressed last week see slightly fewer protests this week. It shows a delayed deterrence effect, built on top of the current-week repression signal.
+
+```{r lasso-eval}
+
+# predictions on test set 
+lasso_pred <- predict(lasso_cv, X_test, s = "lambda.min") |> as.vector()
+
+lasso_rmse <- sqrt(mean((y_test - lasso_pred)^2))
+lasso_mae  <- mean(abs(y_test - lasso_pred))
+
+cat("Lasso — Test RMSE:", round(lasso_rmse, 4), "\n")
+cat("Lasso — Test MAE: ", round(lasso_mae, 4), "\n")
+```
+
+### Lasso Hyperparameter Tuning: Lambda Selection
+
+```{r lasso-tuning}
+# compare lambda.min vs lambda.1se
+lasso_pred_1se <- predict(lasso_cv, X_test, s = "lambda.1se") |> as.vector()
+lasso_rmse_1se <- sqrt(mean((y_test - lasso_pred_1se)^2))
+lasso_mae_1se  <- mean(abs(y_test - lasso_pred_1se))
+
+tibble(
+  Lambda = c("lambda.min", "lambda.1se"),
+  Value = c(round(lasso_cv$lambda.min, 4), round(lasso_cv$lambda.1se, 4)),
+  RMSE = c(round(lasso_rmse, 4), round(lasso_rmse_1se, 4)),
+  MAE  = c(round(lasso_mae, 4), round(lasso_mae_1se, 4)),
+  `Non-zero features` = c(
+    sum(coef(lasso_cv, s = "lambda.min") != 0) - 1,
+    sum(coef(lasso_cv, s = "lambda.1se") != 0) - 1
+  )
+)
+```
+
+`cv.glmnet` tunes lambda via 5-fold cross-validation using time-ordered folds: the training weeks are split into five sequential blocks, ensuring that each fold validates on data from a later period than its training data. `lambda.min` (0.0038) minimizes CV error and retains 13 features, while `lambda.1se` (0.63) is the most regularized model within one standard error, retaining only 2 features. I use `lambda.min` as the primary model since the additional features it retains provide substantive insight, notably the split repression signal. Under the stricter `lambda.1se`, only `protest_roll4` (0.35) and `cum_repress_year` (0.007) survive. Both are ACLED-derived province-level features, not V-Dem year-level indicators. It confirms that when forced to choose, the lasso keeps the features with the most granular, province-week variation. This is consistent with the random forest's importance ranking, where `protest_roll4` and `cum_repress_year` were also the top two predictors. However, the RMSE increases from 1.82 to 2.08, indicating that the 11 features dropped by `lambda.1se` do carry meaningful predictive information.
+
+## Model 2: Random Forest
+
+```{r rf}
+set.seed(42)
+
+# fit random forest
+rf_model <- ranger(
+  x = as.data.frame(X_train),
+  y = y_train,
+  num.trees = 500,
+  mtry = floor(sqrt(ncol(X_train))),  # default for regression
+  importance = "impurity",
+  seed = 42
+)
+
+# variable importance 
+importance_df <- tibble(
+  feature    = names(rf_model$variable.importance),
+  importance = rf_model$variable.importance
+) |>
+  arrange(desc(importance))
+
+importance_df |>
+  mutate(feature = fct_reorder(feature, importance)) |>
+  ggplot(aes(importance, feature)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "Random Forest: Variable Importance",
+       x = "Importance (impurity)", y = NULL)
+```
+
+The random forest variable importance ranking tells a complementary story to the lasso. The dominant predictor is `protest_roll4` (4-week rolling average of protests), followed by `cum_repress_year` (cumulative repression within the year) and `protest_lag1` (last week's protests). Together, these top three confirm that protest momentum is the primary driver of next-week mobilization. The top three predictors show that the best way to predict whether a province will protest next week is to look at how much it has been protesting recently.
+
+The seasonal features (`week_of_year`, `month_num`) rank surprisingly high, 5th and 6th, suggesting that the random forest is picking up nonlinear seasonal patterns (e.g., protest surges around May Day or election cycles) that the linear lasso cannot capture through a single coefficient.
+
+The repression variables (`repress_roll4`, `repression_events`, `repression_binary`, `repress_lag1`) rank in the middle-to-lower tier. This does not mean repression is irrelevant, but it confirms what the correlation matrix suggested: repression adds modest predictive power on top of protest momentum. The random forest finds `repress_roll4` (sustained repression over 4 weeks) more informative than current-week repression measures, suggesting that the accumulation of repressive pressure matters more than any single week's crackdown.
+
+The V-Dem indicators (`v2x_libdem`, `v2csreprss`, `v2x_freexp_altinf`, `v2x_polyarchy`) rank low in the random forest despite being top predictors in the lasso. This is likely because they vary only across years (not across provinces or weeks), so the random forest, which excels at capturing fine-grained, row-level variation, gets less value from them compared to the lasso, which leverages their linear association with overall protest levels.
+
+`repression_fatalities` and `vac_count` rank near the bottom, reflecting their extreme sparsity. It shows that these events are too rare for the random forest to learn reliable splits from.
+
+```{r rf-eval}
+# predictions on test set
+rf_pred <- predict(rf_model, data = as.data.frame(X_test))$predictions
+
+rf_rmse <- sqrt(mean((y_test - rf_pred)^2))
+rf_mae  <- mean(abs(y_test - rf_pred))
+
+cat("Random Forest — Test RMSE:", round(rf_rmse, 4), "\n")
+cat("Random Forest — Test MAE: ", round(rf_mae, 4), "\n")
+```
+
+The random forest achieves a test RMSE of 1.81 and MAE of 1.22. These scores nearly identical to the lasso (RMSE 1.82, MAE 1.20). The two models perform almost the same, which is itself an informative finding. It suggests that the relationship between the features and next-week protest is largely linear and complementary, there are no strong nonlinear interactions that the random forest can exploit beyond what the lasso already captures. The marginal RMSE improvement (0.01) is negligible, while the random forest's MAE is actually slightly worse than the lasso's, meaning the lasso's simpler predictions are about as accurate on typical province-weeks.
+
+This near-parity has a practical implication for the project: since the lasso matches the random forest in predictive performance while offering directly interpretable coefficients (including the split repression signal discussed above), it serves as a credible primary model. The random forest's contribution is complementary. Its variable importance ranking highlights the dominance of protest momentum and reveals that seasonal features carry more predictive value than a linear model can express. Together, the two models triangulate the protest history drives next-week mobilization, repression adds modest predictive value, and regime-level indicators matter at the year level but not at the granular province-week level.
+
+### Random Forest Hyperparameter Tuning
+
+I tune `mtry` (number of features considered at each split) across 3, 5, 7, and 9, and `num.trees` across 200, 500, and 1000.
+
+```{r rf-tuning}
+
+set.seed(42)
+rf_grid <- expand.grid(
+  mtry = c(3, 5, 7, 9),
+  num.trees = c(200, 500, 1000)
+)
+
+rf_tune <- pmap_dfr(rf_grid, function(mtry, num.trees) {
+  rf <- ranger(x = as.data.frame(X_train), y = y_train,
+               num.trees = num.trees, mtry = mtry, seed = 42)
+  pred <- predict(rf, data = as.data.frame(X_test))$predictions
+  tibble(mtry = mtry, num.trees = num.trees,
+         RMSE = sqrt(mean((y_test - pred)^2)))
+})
+
+rf_tune |>
+  ggplot(aes(x = factor(mtry), y = RMSE, color = factor(num.trees), group = num.trees)) +
+  geom_line() + geom_point(size = 2) +
+  labs(title = "Random Forest: Hyperparameter Tuning",
+       x = "mtry (features per split)", y = "Test RMSE", color = "num.trees")
+
+rf_tune |> arrange(RMSE) |> head(5)
+
+```
+
+The tuning grid shows that lower `mtry` values consistently outperform higher ones, with the best performance at `mtry` = 3 across all tree counts. This suggests the random forest benefits from greater tree diversity, forcing each tree to consider only 3 features per split prevents the ensemble from over-relying on the dominant predictor (`protest_roll4`). Increasing `num.trees` from 200 to 1000 yields marginal improvement, indicating that 500 trees is sufficient and the model has converged. The overall best combination (mtry = 3, num.trees = 1000) achieves a test RMSE of 1.810. It is a marginal improvement over the default settings (mtry = 4, num.trees = 500, RMSE = 1.813), confirming that the default configuration was already near-optimal.
+
+## Model 3: XGBoost (Poisson)
+
+```{r xgboost}
+dtrain <- xgb.DMatrix(data = X_train, label = y_train)
+dtest  <- xgb.DMatrix(data = X_test, label = y_test)
+
+set.seed(42)
+xgb_model <- xgb.train(
+  params = list(
+    objective = "count:poisson",
+    eta = 0.1,
+    max_depth = 6,
+    subsample = 0.8
+  ),
+  data = dtrain,
+  nrounds = 500,
+  verbose = 0
+)
+
+cat("Final nrounds: 500\n")
+
+```
+
+```{r xgb-importance}
+xgb_imp <- xgb.importance(model = xgb_model)
+
+xgb_imp |>
+  head(15) |>
+  mutate(Feature = fct_reorder(Feature, Gain)) |>
+  ggplot(aes(Gain, Feature)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "XGBoost: Feature Importance (Gain)",
+       x = "Gain", y = NULL)
+```
+
+XGBoost's feature importance ranking largely agrees with the random forest: `protest_roll4` dominates overwhelmingly, followed by `week_of_year` and `cum_repress_year`. This three-way convergence across lasso (lambda.1se), random forest, and XGBoost, in which all independently identifying protest momentum as the strongest predictor.
+
+One difference from the random forest: XGBoost ranks `v2x_polyarchy` 4th, higher than in the random forest (where it ranked near the bottom). Because XGBoost builds trees sequentially, later trees can pick up residual year-level patterns that the early trees (focused on `protest_roll4`) left behind. The random forest builds trees independently, so its trees all compete for the same dominant signal and rarely reach the V-Dem variables.
+
+The repression variables (`repress_roll4`, `repression_events`, `repress_lag1`) cluster in the lower tier, consistent with all previous models. `repression_fatalities` is last, it is too sparse for even XGBoost to extract reliable splits.
+
+```{r xgb-eval}
+xgb_pred <- predict(xgb_model, dtest)
+
+xgb_rmse <- sqrt(mean((y_test - xgb_pred)^2))
+xgb_mae  <- mean(abs(y_test - xgb_pred))
+
+cat("XGBoost — Test RMSE:", round(xgb_rmse, 4), "\n")
+cat("XGBoost — Test MAE: ", round(xgb_mae, 4), "\n")
+```
+
+XGBoost achieves a test RMSE of 2.03 and MAE of 1.29, it slightly worse than lasso (1.82 / 1.20) and random forest (1.81 / 1.22). The hyperparameter tuning grid in the next section will test whether a different combination of learning rate and tree depth can close this gap. Regardless of the raw RMSE, XGBoost's value in this project lies less in predictive accuracy and more in what it enables through SHAP values, which provide individual-level feature decompositions that neither the lasso nor the random forest can produce.
+
+### XGBoost Hyperparameter Tuning
+
+```{r xgb-tuning}
+set.seed(42)
+xgb_grid <- expand.grid(
+  max_depth = c(3, 6, 9),
+  eta = c(0.05, 0.1, 0.3)
+)
+
+xgb_tune <- pmap(xgb_grid, function(max_depth, eta) {
+  model <- xgb.train(
+    params = list(objective = "count:poisson",
+                  max_depth = max_depth, eta = eta, subsample = 0.8),
+    data = dtrain, nrounds = 500, verbose = 0
+  )
+  pred <- predict(model, dtest)
+  tibble(max_depth, eta,
+         RMSE = sqrt(mean((y_test - pred)^2)))
+}) |> list_rbind()
+
+xgb_tune |>
+  ggplot(aes(x = factor(max_depth), y = RMSE, 
+             color = factor(eta), group = eta)) +
+  geom_line() + geom_point(size = 2) +
+  labs(title = "XGBoost: Hyperparameter Tuning",
+       x = "max_depth", y = "Test RMSE", color = "eta (learning rate)")
+
+xgb_tune |> arrange(RMSE) |> head(5)
+```
+
+The tuning grid shows that lower learning rates and shallower trees perform best. The winning combination is `max_depth` = 3 with `eta` = 0.05 (RMSE = 1.87), followed by `max_depth` = 6 with `eta` = 0.05 (RMSE = 1.94). The slowest learning rate (eta = 0.05, red line) consistently outperforms the faster rates across all tree depths, suggesting the model benefits from making small corrections rather than large adjustments at each step. Shallow trees (max_depth = 3) outperform deeper ones (6, 9) at every learning rate. It is consistent with the broader finding across all models that the repression–mobilization relationship is largely linear and additive. The worst performer is eta = 0.3 (blue line), which sits flat around RMSE 2.18 regardless of depth, it shows that learning too aggressively overshoots the accurate signal.
+
+The best-tuned XGBoost (RMSE = 1.87) improves on the default configuration (RMSE = 2.03) but still trails the lasso (1.82) and random forest (1.81). This suggests that the Poisson objective's count-aware structure does not provide a predictive advantage on this particular dataset, likely because the zero-heavy distribution is already handled adequately by the linear and bagging approaches. Nonetheless, XGBoost's primary contribution to this project is not raw predictive performance but the SHAP values it enables: which provide individual-level feature decompositions that neither the lasso nor the random forest can produce.
+
+## Model Comparison
+
+```{r model-comparison}
+tibble(
+  Model = c("Lasso (lambda.min)", "Random Forest", "XGBoost (Poisson)"),
+  RMSE  = c(lasso_rmse, rf_rmse, xgb_rmse),
+  MAE   = c(lasso_mae, rf_mae, xgb_mae)
+)
+```
+
+```{r pred-vs-actual}
+tibble(actual = y_test, predicted = lasso_pred) |>
+  ggplot(aes(actual, predicted)) +
+  geom_point(alpha = 0.1, size = 0.5) +
+  geom_abline(color = "firebrick", linetype = "dashed") +
+  labs(title = "Lasso: Predicted vs Actual",
+       x = "Actual protest count (t+1)", y = "Predicted")
+
+tibble(actual = y_test, predicted = rf_pred) |>
+  ggplot(aes(actual, predicted)) +
+  geom_point(alpha = 0.1, size = 0.5) +
+  geom_abline(color = "firebrick", linetype = "dashed") +
+  labs(title = "Random Forest: Predicted vs Actual",
+       x = "Actual protest count (t+1)", y = "Predicted")
+
+tibble(actual = y_test, predicted = xgb_pred) |>
+  ggplot(aes(actual, predicted)) +
+  geom_point(alpha = 0.1, size = 0.5) +
+  geom_abline(color = "firebrick", linetype = "dashed") +
+  labs(title = "XGBoost: Predicted vs Actual",
+       x = "Actual protest count (t+1)", y = "Predicted")
+```
+
+All three models predict quiet province-weeks well but systematically underpredict extreme spikes. When actual protests reach 15 or 20+, predictions cap much lower. This underprediction is expected: extreme protest weeks are rare events driven by idiosyncratic triggers that no current feature can anticipate. One notable difference: the lasso occasionally produces negative predictions (nonsensical for count data), while XGBoost's Poisson objective naturally constrains predictions to non-negative values.
+
+```{r}
+# evaluate on nonzero weeks only
+nonzero <- y_test > 0
+
+tibble(
+  Subset = c("All weeks", "Nonzero weeks only", "Spike weeks (5+)"),
+  N = c(length(y_test), sum(nonzero), sum(y_test >= 5)),
+  Lasso_RMSE = c(
+    sqrt(mean((y_test - lasso_pred)^2)),
+    sqrt(mean((y_test[nonzero] - lasso_pred[nonzero])^2)),
+    sqrt(mean((y_test[y_test >= 5] - lasso_pred[y_test >= 5])^2))
+  ),
+  RF_RMSE = c(
+    sqrt(mean((y_test - rf_pred)^2)),
+    sqrt(mean((y_test[nonzero] - rf_pred[nonzero])^2)),
+    sqrt(mean((y_test[y_test >= 5] - rf_pred[y_test >= 5])^2))
+  ),
+  XGB_RMSE = c(
+    sqrt(mean((y_test - xgb_pred)^2)),
+    sqrt(mean((y_test[nonzero] - xgb_pred[nonzero])^2)),
+    sqrt(mean((y_test[y_test >= 5] - xgb_pred[y_test >= 5])^2))
+  )
+)
+```
+
+Disaggregating performance by subset reveals a more honest picture of model quality. On all weeks, the three models appear similar (RMSE 1.81–2.08). But on nonzero weeks only, where contention is actually occurring, error increases to 2.11–2.53. On spike weeks (5+ protests), RMSE jumps to 4.09–5.78. This confirms that overall RMSE is dominated by the quiet majority, flattering models that are good at predicting "nothing happened" but weak on the politically consequential weeks where repression and mobilization dynamics actually play out. The random forest performs best across all three subsets, with the largest advantage on spike weeks (RMSE 4.09 vs. lasso's 5.78). This is shows that random forests ability to capture nonlinear patterns helps most where the data is most volatile. The lasso suffers most on spikes, consistent with its linear structure struggling to extrapolate beyond the range of typical observations. XGBoost falls between the two despite its Poisson objective, suggesting that count-aware modeling alone does not solve the spike prediction problem. The practical implication is that all three models are more reliable as tools for understanding average-case dynamics (what predicts typical week-to-week protest levels) than as forecasters of rare escalation events.
+
+# Model Interpretation
+
+## Partial Dependence Plots
+
+```{r pdp}
+
+# PDP for repression_events
+partial(rf_model, pred.var = "repression_events",
+        train = as.data.frame(X_train)) |>
+  autoplot() +
+  labs(title = "Partial Dependence: Repression Events → Next-Week Protest",
+       x = "Repression events (week t)", y = "Predicted protest count (t+1)")
+
+# PDP for protest_roll4
+partial(rf_model, pred.var = "protest_roll4",
+        train = as.data.frame(X_train)) |>
+  autoplot() +
+  labs(title = "Partial Dependence: Protest Rolling Mean → Next-Week Protest",
+       x = "4-week rolling mean of protests", y = "Predicted protest count (t+1)")
+```
+
+The partial dependence plots show the marginal effect of each feature on predictions, holding all other features constant.
+
+The PDP for `repression_events` reveals a threshold pattern: predicted protest rises sharply from 0 to 2 repression events (from \~1.05 to \~1.21), then plateaus. This means the first one or two repressive interventions are associated with *more* next-week protest, which is consistent with a backlash effect, but additional repression beyond that point produces no further increase. The curve never turns downward, which contrasts with the lasso's negative coefficient on `repression_events`. The difference is that the lasso estimates a single linear slope across all values, while the PDP reveals the nonlinear shape: repression's backlash effect kicks in immediately but saturates quickly. In substantive terms, the initial act of state intervention provokes a mobilization response, but piling on more interventions in the same week does not provoke proportionally more backlash.
+
+The PDP for `protest_roll4` shows a steep rise that flattens into a ceiling. When a province's 4-week average is near zero, predicted next-week protest is below 1. As the rolling mean rises from 0 to 5, predictions climb steeply to about 3. Beyond 10, the curve flattens around 3.5. This means protest momentum has a strong mobilization effect at low-to-moderate levels — going from "quiet" to "active" matters a lot — but at high levels, additional momentum adds diminishing returns. A province already averaging 15 protests per week doesn't get much more from averaging 20. This saturation effect explains why the models systematically underpredict extreme spikes: the random forest learns that momentum predicts more protest, but it also learns that the relationship flattens, so it never predicts values above \~3.5 from this feature alone.
+
+Together, the two PDPs confirm a consistent story: both repression and protest momentum have nonlinear, diminishing-return effects. The initial shock matters, whether it's the first crackdown or the first wave of protest. However, the marginal effect fades beyond a certain thresholds. This is the kind of nuance that the lasso's linear coefficients cannot capture, and it is where the random forest adds interpretive value beyond what a penalized regression provides.
+
+## SHAP Values
+
+```{r shap-values}
+
+set.seed(42)
+xgb_best <- xgb.train(
+  params = list(objective = "count:poisson",
+                max_depth = 3, eta = 0.05, subsample = 0.8),
+  data = dtrain, nrounds = 500, verbose = 0
+)
+
+shap_values <- shap.values(xgb_model = xgb_best, X_train = X_train)
+shap_long   <- shap.prep(shap_contrib = shap_values$shap_score, X_train = X_train)
+shap.plot.summary(shap_long)
+```
+
+The SHAP summary plot indicates that `protest_roll4` contributes the most to model predictions, followed by `cum_repress_year`, suggesting that recent protest dynamics and accumulated repression are the main variables shifting predicted next-week protest counts. The dependence plots help clarify whether these associations are monotonic, nonlinear, or concentrated at particular thresholds.
+
+I next use SHAP dependence plots to examine the two features that contribute most to the XGBoost model’s predictions: `protest_roll4` and `cum_repress_year`. Whereas the SHAP summary plot ranks features by overall importance, the dependence plots reveal the functional form of each relationship by showing how changes in a feature are associated with changes in its contribution to the predicted protest count. These diagnostics are interpretive. It shows positive SHAP values indicate that a feature increases the model’s predicted protest count relative to the baseline, while negative values indicate the opposite.
+
+```{r shap-dependence-plots}
+shap.plot.dependence(data_long = shap_long, x = "protest_roll4")
+shap.plot.dependence(data_long = shap_long, x = "cum_repress_year")
+```
+
+The plot for `protest_roll4` indicates a strongly increasing relationship at low to moderate values, followed by a clear plateau, suggesting that recent protest activity sharply increases predicted next-week protest counts up to a point, after which additional recent events yield smaller marginal increases. This pattern is consistent with a momentum dynamic, but also indicates diminishing returns at higher levels of recent contention. The slight decline at the extreme upper tail should be interpreted cautiously because it is based on comparatively few observations.
+
+The dependence plot for `cum_repress_year` reveals a more gradual nonlinear pattern. At low levels, accumulated repression has little or negative contribution to the predicted protest count, but its SHAP value increases steadily across the mid-range before flattening at higher values. This suggests that the model associates accumulated repression with higher expected protest, though the marginal contribution weakens as repression becomes more extensive. Taken together, these plots indicate that the model’s predictions are shaped primarily by short-term protest momentum and secondarily by accumulated repression, with both relationships appearing nonlinear rather than strictly linear. These diagnostics describe the structure of the fitted model and should not be interpreted as evidence of causal effects (@lundberg2017; @molnar2023)
+
+## Findings and Discussion
+
+### Findings Linked to the Research Questions
+
+#### RQ1 (Mobilization)
+
+All three models confirm that repression predicts next-week protest, but the direction depends on the form of repression. The lasso's coefficients reveal a split signal: lethal repression (`repression_fatalities = +1.31`) is associated with backlash while repeated non-lethal intervention (`repression_events = -0.38`) is associated with deterrence. This is consistent with @davenport2007's argument that repression is multi-modal and @earl2011's emphasis that contradictory findings in the literature reflect variation in tactics rather than measurement error. @siddiqui2025 find a similar pattern in Bangladesh, where "excessive force against protesters" was the dominant predictor of nationwide escalation.
+
+The SHAP dependence plots add nuance to this picture: the PDP for `repression_events` shows that the backlash effect kicks in with the first intervention but saturates after 2 events, it means additional crackdowns in the same week do not provoke proportionally more protest. Across all models, protest momentum (`protest_roll4`) remains the strongest predictor. Repression matters, but on top of an baseline where past protest is the dominant driver of future protest.
+
+#### RQ3 (Heterogeneity, preliminary)
+
+The opposing signs on different repression measures within a single lasso model provide preliminary evidence that repression effects are heterogeneous rather than uniform, the same "repression" produces backlash when lethal but deterrence when routine. Beyond this type-level heterogeneity, the SHAP dependence plots reveal observation-level heterogeneity: at the same value of `cum_repress_year` or `protest_roll4`, different province-weeks receive different SHAP contributions, producing substantial vertical spread. This means the effect of accumulated repression and protest momentum is not uniform across contexts because some province-weeks respond more strongly than others, depending on features the SHAP decomposition does not isolate individually.
+
+The V-Dem regime indicators illustrate a different dimension of heterogeneity: they rank among the lasso's strongest predictors (democratic openness enables mobilization at the year level) but rank low in the random forest and XGBoost (which operate at the granular province-week level). This divergence suggests that regime context operates at a different temporal scale than movement dynamics. A causal forest extension in future work will formally identify the drivers of the observation-level heterogeneity visible in the SHAP dependence plots, including regime conditions, movement capacity, geographic context, and their interactions.
+
+#### RQ2 (Durability)
+
+Not directly addressed in the current models. The next-week prediction framing captures short-run mobilization responses but not the longer-run question of how quickly areas enter quiescence. This remains a planned extension using discrete-time hazard models and, eventually, causal survival forests [@athey2019].
+
+### Model Evaluation
+
+The disaggregated evaluation reveals that overall RMSE flatters models that are good at predicting quiet weeks but weak on politically consequential ones. On all weeks, the three models appear similar (RMSE 1.81–2.03). On nonzero weeks, where contention is actually occurring, error increases to 2.11–2.53. On spike weeks (5+ protests), RMSE jumps to 4.09–5.78. The random forest performs best across all three subsets, with the largest advantage on spike weeks, its ability to capture nonlinear patterns helps most where the data is most volatile. The lasso suffers most on spikes, consistent with its linear structure struggling to extrapolate beyond the range of typical observations.
+
+The significance of this project, however, lies not in forecasting accuracy but in what the models reveal about the structure of the repression–mobilization relationship. The split repression signal, the nonlinear saturation in the PDPs, and the observation-level heterogeneity in the SHAP plots are all substantive discoveries that contribute to the theoretical understanding of when and how repression reshapes contention.
+
+### Limitations
+
+Several limitations qualify these findings:
+
+First, the analysis is purely predictive. The lasso coefficients suggest associations, not causal effects. Protest momentum and repression are endogenous: provinces that protest more attract more repression, and repression occurs precisely in contexts where protests are already high. Without a causal identification strategy, the split repression signal could reflect selection rather than a genuine backlash/deterrence dynamic.
+
+Second, V-Dem indicators vary only at the country-year level, limiting their utility as moderators within a single-country panel. Year-to-year shifts in Indonesia's democratic quality may be too slow to capture meaningful variation in how repression lands. Subnational socioeconomic data from BPS surveys (Susenas, Sakernas) would provide the province-level variation needed to test moderating effects more rigorously.
+
+Third, all three models systematically underpredict extreme protest weeks. The disaggregated evaluation confirms this quantitatively: spike-week RMSE (4.09–5.78) is roughly double the overall RMSE. These rare events are driven by single case, e.g. viral incident of police violence, a new unpopular law, an election dispute. No feature in the current model can anticipate these rare events. A more complete evaluation framework would include a parallel binary classification task (predicting onset or escalation) scored with precision, recall, and PR-AUC, which focus directly on retrieval of rare positive events rather than letting the quiet majority dominate the metric. However, this reframing is left for future work.
+
+Fourth, the non-IID panel structure is only partially addressed. The time-based train/test split prevents temporal leakage, time-ordered folds maintain consistency in lasso lambda selection, and lagged features control for autocorrelation. However, within-week cross-provincial correlation remains unhandled. Panel-corrected or clustered standard errors would be more appropriate for the future project iteration to address the cross-provincial correlation.
+
+### Critical Self-Assessment
+
+With more time and resources, several improvements would strengthen this analysis:
+
+First, the non-IID panel structure calls for like clustered standard errors or panel-corrected models, which would more rigorously account for within-province temporal correlation and within-week spatial correlation.
+
+Second, hyperparameter tuning was limited to small grids. A broader search including `min.node.size` for random forest and regularization parameters for XGBoost might improve performance on the sparse tail.
+
+Third, the current feature set lacks subnational socioeconomic data such as poverty rates, unemployment, urbanization, and youth population shares from Indonesian national surveys (Susenas, Sakernas) would provide province-level variation that ACLED-derived proxies and country-level V-Dem indicators cannot capture, enabling a sharper test of whether structural conditions moderate repression effects.
+
+Fourth, the causal forest framework [@athey2019] would move the analysis from prediction to causal heterogeneity estimation (RQ3), directly testing whether the treatment effect of repression varies across regime conditions and movement capacity levels. The observation-level heterogeneity visible in the SHAP dependence plots motivates this. It shows that the vertical spread at a given feature value implies that context matters, but identifying which context requires a method designed for conditional treatment effect estimation rather than prediction. This is planned as part of the future extension.
+
+Finally, a durability outcome using discrete-time hazard models would address RQ2 directly, measuring not just the level of next-week protest but how long contention persists after a repressive shock: shifting the question from "how much protest?" to "how long does protest last?"
+
+# References 
+
+::: {#refs}
+:::
